@@ -1,0 +1,4 @@
+framework module ConnectLiveSDK {
+  header "ConnectLiveSDK-Swift.h"
+  requires objc
+}
