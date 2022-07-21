@@ -1,4 +1,4 @@
-# Kakao-i ConnectLive SDK #
+# Kakao-i ConnectLive SDK
 
 This application is Copyright © Kakao Enterprise. All rights reserved.
 

@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "ConnectLive-WebRTC",
+        "repositoryURL": "https://github.com/kakaoi-clive/ios-webrtc-sdk.git",
+        "state": {
+          "branch": null,
+          "revision": "e25d9293426d61b1e50bbef23c8a99f63fa505f4",
+          "version": "1.103.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

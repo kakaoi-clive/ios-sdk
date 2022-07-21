@@ -2,8 +2,6 @@
 //  connect_live.h
 //  connect-live
 //
-//  Created by chance.k on 2021/10/05.
-//
 
 #import <Foundation/Foundation.h>
 

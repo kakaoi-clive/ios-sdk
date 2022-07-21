@@ -3,7 +3,6 @@
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ConnectLiveSDK
 import AVFoundation
 import AVKit
-import AudioToolbox
 import Combine
 import CoreMIDI
 import CryptoKit
@@ -18,8 +17,7 @@ import os.log
 import os
 public protocol ScreenShare {
   typealias ErrorCallback = (ConnectLiveSDK.ScreenShareData.ExtensionErrorCode, Swift.String) -> Swift.Void
-  init(appGroup: Swift.String) throws
-  func start(callback: @escaping Self.ErrorCallback)
+  func start(completion: @escaping Self.ErrorCallback)
   func pause()
   func resume()
   func stop(completion: @escaping () -> Swift.Void)
@@ -94,20 +92,21 @@ public enum AudioProcessingType : Swift.String {
   }
 }
 public struct LocalMediaOptions {
+  public static var audioType: ConnectLiveSDK.AudioProcessingType
+  public static var autoGain: Swift.Bool
   public var source: ConnectLiveSDK.CapturerType
   public var hasAudio: Swift.Bool
   public var hasVideo: Swift.Bool
   public var video: Swift.Bool
   public var audio: Swift.Bool
-  public var extraValue: Swift.String
+  public var videoExtraValue: Swift.String
+  public var audioExtraValue: Swift.String
   public var rotationType: ConnectLiveSDK.CameraRotationType
   public var position: AVFoundation.AVCaptureDevice.Position
   public var isMirror: Swift.Bool
   public var fileName: Swift.String
-  public var cameraCapturewWidth: Swift.Int
-  public var cameraCaptureHeight: Swift.Int
-  public var audioType: ConnectLiveSDK.AudioProcessingType
-  public var autoGain: Swift.Bool
+  public var videoWidth: Swift.Int
+  public var videoHeight: Swift.Int
   public enum DevelopOption : Swift.String {
     case fps
     case videoStreamSubType
@@ -122,7 +121,7 @@ public struct LocalMediaOptions {
 public protocol RoomDelegate : AnyObject {
   func onConnecting(progress: Swift.Float)
   func onConnected(participantIds: [Swift.String])
-  func onDisconnected()
+  func onDisconnected(reason: ConnectLiveSDK.DisconnectReason)
   func onError(code: Swift.Int, message: Swift.String, isCritical: Swift.Bool)
   func onParticipantEntered(remoteParticipant: ConnectLiveSDK.RemoteParticipant)
   func onParticipantLeft(remoteParticipant: ConnectLiveSDK.RemoteParticipant)
@@ -136,6 +135,7 @@ public protocol RoomDelegate : AnyObject {
   func onRemoteAudioUnsubscribed(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   func onRemoteVideoStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteVideo: ConnectLiveSDK.RemoteVideo)
   func onRemoteAudioStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
+  func onUserMessage(senderId: Swift.String, message: Swift.String)
 }
 extension ConnectLiveSDK.RoomDelegate {
   public func onConnecting(progress: Swift.Float)
@@ -145,6 +145,7 @@ extension ConnectLiveSDK.RoomDelegate {
   public func onRemoteAudioUnpublished(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   public func onRemoteAudioSubscribed(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   public func onRemoteAudioUnsubscribed(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
+  public func onUserMessage(senderId: Swift.String, message: Swift.String)
 }
 public struct Config {
   public var mediaOptions: ConnectLiveSDK.LocalMediaOptions
@@ -194,23 +195,32 @@ public protocol Room : AnyObject {
   func getVideoOccupants() -> [Swift.String]
   func getAudioOccupants() -> [Swift.String]
   func setMuted(_ isMuted: Swift.Bool)
-  func requestScreenShare(appGroup: Swift.String, extensionName: Swift.String, callback: @escaping (ConnectLiveSDK.ScreenShareData.ExtensionStatus) -> Swift.Void) throws
+  func sendUserMessage(participantIds: [Swift.String], message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  func sendUserMessage(participantIds: [Swift.String], message: Swift.String) async -> Swift.Result<Swift.Void, Swift.Error>
+  #endif
+
+  func requestScreenShare(appGroup: Swift.String, extensionName: Swift.String, completion: @escaping (ConnectLiveSDK.ScreenShareData.ExtensionStatus) -> Swift.Void) throws
   func stopScreenShare(isLeftRoom: Swift.Bool)
   
   #if compiler(>=5.3) && $AsyncAwait
   func getAudioLevels() async -> [Swift.String : Swift.Int]
   #endif
 
+  func getAudioLevels(completion: @escaping ([Swift.String : Swift.Int]) -> ())
   
   #if compiler(>=5.3) && $AsyncAwait
   func getLocalStatsReport() async -> [Swift.String : ConnectLiveSDK.Statistics]
   #endif
 
+  func getLocalStatsReport(completion: @escaping ([Swift.String : ConnectLiveSDK.Statistics]) -> ())
   
   #if compiler(>=5.3) && $AsyncAwait
   func getRemoteStatsReport() async -> [Swift.String : ConnectLiveSDK.Statistics]
   #endif
 
+  func getRemoteStatsReport(completion: @escaping ([Swift.String : ConnectLiveSDK.Statistics]) -> ())
   
   #if compiler(>=5.3) && $AsyncAwait
   func getLocalQualityStatsReport() async -> ConnectLiveSDK.QualitySession?
@@ -221,9 +231,6 @@ public protocol Room : AnyObject {
   func getRemoteQualityStatsReport() async -> ConnectLiveSDK.QualitySession?
   #endif
 
-  func getAudioLevels(completion: @escaping ([Swift.String : Swift.Int]) -> ())
-  func getLocalStatsReport(completion: @escaping ([Swift.String : ConnectLiveSDK.Statistics]) -> ())
-  func getRemoteStatsReport(completion: @escaping ([Swift.String : ConnectLiveSDK.Statistics]) -> ())
   func restartIce()
 }
 public protocol LocalMedia : AnyObject {
@@ -270,18 +277,39 @@ extension ConnectLiveSDK.RemoteVideo {
   }
   public func getExtraValue() -> Swift.String
 }
+public enum DisconnectReason {
+  case disconnected
+  case destroyed
+  case kicked
+  public static func == (a: ConnectLiveSDK.DisconnectReason, b: ConnectLiveSDK.DisconnectReason) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
 @_hasMissingDesignatedInitializers final public class ConnectLive {
+  public typealias ProvisionResult = (Swift.Int, Swift.String)
   public typealias ProvisionCallback = (_ code: Swift.Int, _ message: Swift.String) -> ()
   public static var version: Swift.String {
     get
   }
-  public static func signIn(url: Swift.String = "", serviceId: Swift.String, key: Swift.String, secret: Swift.String, callback: @escaping ConnectLiveSDK.ConnectLive.ProvisionCallback)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func signIn(serviceId: Swift.String, key: Swift.String, secret: Swift.String, endpoint: Swift.String = "") async -> ConnectLiveSDK.ConnectLive.ProvisionResult
+  #endif
+
+  public static func signIn(serviceId: Swift.String, key: Swift.String, secret: Swift.String, endpoint: Swift.String = "", completion: @escaping ConnectLiveSDK.ConnectLive.ProvisionCallback)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  public static func signIn(serviceId: Swift.String, token: Swift.String, endpoint: Swift.String = "") async -> ConnectLiveSDK.ConnectLive.ProvisionResult
+  #endif
+
+  public static func signIn(serviceId: Swift.String, token: Swift.String, endpoint: Swift.String = "", completion: @escaping ConnectLiveSDK.ConnectLive.ProvisionCallback)
   public static func signOut()
-  public static func signIn(url: Swift.String = "", serviceId: Swift.String, token: Swift.String, callback: @escaping ConnectLiveSDK.ConnectLive.ProvisionCallback)
-  public static func createRoom(config: ConnectLiveSDK.Config?, callback: ConnectLiveSDK.RoomDelegate) -> ConnectLiveSDK.Room
+  public static func createRoom(config: ConnectLiveSDK.Config?, delegate: ConnectLiveSDK.RoomDelegate) -> ConnectLiveSDK.Room
   public static func createLocalMedia(options: ConnectLiveSDK.LocalMediaOptions) -> ConnectLiveSDK.LocalMedia?
   public static func createScreenShare(appGroup: Swift.String) throws -> ConnectLiveSDK.ScreenShare
-  public static func setAudioSessionConfiguration(category: AVFAudio.AVAudioSession.Category, mode: AVFAudio.AVAudioSession.Mode, options: AVFAudio.AVAudioSession.CategoryOptions, ioBufferDuration: Foundation.TimeInterval = 0.06, delegate: ConnectLiveSDK.AudioSessionDelegate? = nil)
+  public static func setAudioSessionConfiguration(category: AVFAudio.AVAudioSession.Category, mode: AVFAudio.AVAudioSession.Mode, options: AVFAudio.AVAudioSession.CategoryOptions, delegate: ConnectLiveSDK.AudioSessionDelegate? = nil)
   public static func setAudioSessionWithCurrentCategory()
   @objc deinit
 }
@@ -306,6 +334,7 @@ public struct Token : Swift.Codable {
   public init(from decoder: Swift.Decoder) throws
 }
 public struct IceServer : Swift.Codable {
+  public init(urls: [Swift.String], name: Swift.String?, credential: Swift.String?)
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
@@ -394,13 +423,26 @@ extension ConnectLiveSDK.RemoteAudio {
   }
   public func getExtraValue() -> Swift.String
 }
+public enum ConnectLiveError : Foundation.LocalizedError {
+  case error(Swift.Int, Swift.String)
+  case provision(Swift.Int, Swift.String, Any?)
+  public var code: Swift.Int {
+    get
+  }
+  public var localizedDescription: Swift.String {
+    get
+  }
+  public var errorDescription: Swift.String? {
+    get
+  }
+}
 public struct QualityMetric : Swift.Encodable, Swift.Hashable {
   public let type: ConnectLiveSDK.StreamMediaType
   public let streamId: Swift.Int
-  public var bytesSent: Swift.Int? {
+  public var bytesSent: Swift.UInt? {
     get
   }
-  public var packetsSent: Swift.Int? {
+  public var packetsSent: Swift.UInt? {
     get
   }
   public var srcAudioLevel: Swift.Double? {
@@ -409,10 +451,10 @@ public struct QualityMetric : Swift.Encodable, Swift.Hashable {
   public var srcFrames: Swift.Int? {
     get
   }
-  public var framesEncoded: Swift.Int? {
+  public var framesEncoded: Swift.UInt? {
     get
   }
-  public var framesSent: Swift.Int? {
+  public var framesSent: Swift.UInt? {
     get
   }
   public var profile: ConnectLiveSDK.VideoProfileType? {
@@ -421,22 +463,22 @@ public struct QualityMetric : Swift.Encodable, Swift.Hashable {
   public var receiverId: Swift.Int? {
     get
   }
-  public var bytesReceived: Swift.Int? {
+  public var bytesReceived: Swift.UInt? {
     get
   }
-  public var packetsLost: Swift.Int? {
+  public var packetsLost: Swift.UInt? {
     get
   }
-  public var totalSamplesReceived: Swift.Int? {
+  public var totalSamplesReceived: Swift.UInt? {
     get
   }
   public var audioLevel: Swift.Double? {
     get
   }
-  public var framesReceived: Swift.Int? {
+  public var framesReceived: Swift.UInt? {
     get
   }
-  public var framesDecoded: Swift.Int? {
+  public var framesDecoded: Swift.UInt? {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
@@ -520,6 +562,8 @@ extension ConnectLiveSDK.LocalMediaOptions.DevelopOption : Swift.Hashable {}
 extension ConnectLiveSDK.LocalMediaOptions.DevelopOption : Swift.RawRepresentable {}
 extension ConnectLiveSDK.RoomStatus : Swift.Equatable {}
 extension ConnectLiveSDK.RoomStatus : Swift.Hashable {}
+extension ConnectLiveSDK.DisconnectReason : Swift.Equatable {}
+extension ConnectLiveSDK.DisconnectReason : Swift.Hashable {}
 extension ConnectLiveSDK.SessionDirection : Swift.Equatable {}
 extension ConnectLiveSDK.SessionDirection : Swift.Hashable {}
 extension ConnectLiveSDK.SessionDirection : Swift.RawRepresentable {}

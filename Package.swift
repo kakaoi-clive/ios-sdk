@@ -12,11 +12,20 @@ let package = Package(
         // Products define the executables and libraries a package produces, and make them visible to other packages.
         .library(
             name: "ConnectLiveSDK",
-            targets: ["ConnectLiveSDK"]),
+            targets: ["ConnectLiveBundle"]),
     ],
     dependencies: [
+        .package(name: "ConnectLive-WebRTC", url: "https://github.com/kakaoi-clive/ios-webrtc-sdk.git" , .exact("1.103.1")),
     ],
     targets: [
         .binaryTarget(name: "ConnectLiveSDK", path: "ConnectLiveSDK.xcframework"),
+        .target(
+            name: "ConnectLiveBundle",
+            dependencies: [
+                .target(name: "ConnectLiveSDK"),
+                "ConnectLive-WebRTC"
+            ],
+            path: "ConnectLiveBundle"
+        )
     ]
 )

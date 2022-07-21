@@ -14,7 +14,7 @@
 - 배포방식: Swift Package Manager
 - Swift 최소 버전
 ```
-ConnectLive SDK 2.1.0 : Swift 5.6.1, Xcode : 13.4
+ConnectLive SDK 2.1.1 : Swift 5.6.1, Xcode : 13.4
 ```
 - bitcode 미지원
 
@@ -23,7 +23,7 @@ ConnectLive SDK 2.1.0 : Swift 5.6.1, Xcode : 13.4
 Xcode > File > Add Packages
 ```
 Name: ConnectLiveSDK
-Version Rules: 2.1.0 - Next Minor
+Version Rules: 2.1.2 - Next Minor
 Location: https://github.com/kakaoi-clive/ios-sdk.git
 ```
 
@@ -106,7 +106,6 @@ iOS의 경우 os의 오디오 세션을 별도 설정해 주어야 합니다.
 ConnectLive.setAudioSessionConfiguration(category: AVAudioSession.Category,
                                          mode: AVAudioSession.Mode,
                                          options: AVAudioSession.CategoryOptions,
-                                         ioBufferDuration: TimeInterval = 0.06,
                                          delegate: AudioSessionDelegate? = nil)
 ```
 
@@ -982,3 +981,4 @@ class ConnectLiveSampleHandler: RPBroadcastSampleHandler {
 # 문서 및 링크
 - https://docs.kakaoi.ai/connect_live/
 - https://connectlive.kakaoi.ai/
+
