@@ -14,7 +14,7 @@
 - 배포방식: Swift Package Manager
 - Swift 최소 버전
 ```
-ConnectLive SDK 2.1.1 : Swift 5.6.1, Xcode : 13.4
+ConnectLive SDK 2.1.2 : Swift 5.6.1, Xcode : 13.4
 ```
 - bitcode 미지원
 
@@ -199,10 +199,10 @@ struct LocalMediaOptions {
     var cameraCaptureHeight: Int = 480
 
     /// 오디오 타입
-    var audioType: AudioProcessingType = .voice
+    static var audioType: AudioProcessingType = .voice
 
     /// AGC 유무
-    var autoGain: Bool = false
+    static var autoGain: Bool = false
 }
 ```
 
