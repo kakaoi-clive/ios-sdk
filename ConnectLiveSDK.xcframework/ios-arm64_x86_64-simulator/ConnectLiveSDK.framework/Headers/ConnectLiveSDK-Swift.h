@@ -251,10 +251,11 @@ SWIFT_PROTOCOL("_TtP14ConnectLiveSDK20AudioSessionDelegate_")
 SWIFT_CLASS("_TtC14ConnectLiveSDK12UIRenderView")
 @interface UIRenderView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)didMoveToSuperview;
 - (void)removeFromSuperview;
 @end
+
 
 
 #if __has_attribute(external_source_symbol)
@@ -515,10 +516,11 @@ SWIFT_PROTOCOL("_TtP14ConnectLiveSDK20AudioSessionDelegate_")
 SWIFT_CLASS("_TtC14ConnectLiveSDK12UIRenderView")
 @interface UIRenderView : UIView
 - (nonnull instancetype)initWithFrame:(CGRect)frame SWIFT_UNAVAILABLE;
-- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder SWIFT_UNAVAILABLE;
+- (nullable instancetype)initWithCoder:(NSCoder * _Nonnull)coder OBJC_DESIGNATED_INITIALIZER;
 - (void)didMoveToSuperview;
 - (void)removeFromSuperview;
 @end
+
 
 
 #if __has_attribute(external_source_symbol)

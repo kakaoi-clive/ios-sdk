@@ -55,6 +55,7 @@ public protocol LocalAudio : AnyObject {
   var owner: Swift.String { get }
   var active: Swift.Bool { get set }
   var extraValue: Swift.String { get set }
+  var alwaysOn: Swift.Bool { get set }
 }
 extension ConnectLiveSDK.LocalAudio {
   public func setExtraValue(_ extraValue: Swift.String)
@@ -139,12 +140,16 @@ public protocol RoomDelegate : AnyObject {
 }
 extension ConnectLiveSDK.RoomDelegate {
   public func onConnecting(progress: Swift.Float)
+  public func onLocalMediaPublished(localMedia: ConnectLiveSDK.LocalMedia?)
+  public func onLocalMediaUnpublished(localMedia: ConnectLiveSDK.LocalMedia?)
   public func onRemoteVideoPublished(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteVideo: ConnectLiveSDK.RemoteVideo)
   public func onRemoteVideoUnpublished(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteVideo: ConnectLiveSDK.RemoteVideo)
   public func onRemoteAudioPublished(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   public func onRemoteAudioUnpublished(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   public func onRemoteAudioSubscribed(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   public func onRemoteAudioUnsubscribed(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
+  public func onRemoteVideoStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteVideo: ConnectLiveSDK.RemoteVideo)
+  public func onRemoteAudioStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   public func onUserMessage(senderId: Swift.String, message: Swift.String)
 }
 public struct Config {
@@ -240,18 +245,19 @@ public protocol LocalMedia : AnyObject {
   var isMirror: Swift.Bool { get }
   var audioLevel: Swift.Int { get }
   func start(completion: @escaping (Swift.Error?) -> ())
-  func stop()
-  func switchCamera(position: AVFoundation.AVCaptureDevice.Position, isMirror: Swift.Bool, completion: @escaping (Swift.Error?) -> ())
   
   #if compiler(>=5.3) && $AsyncAwait
   func start() async throws
   #endif
 
+  func stop()
+  func switchCamera(position: AVFoundation.AVCaptureDevice.Position, isMirror: Swift.Bool, completion: @escaping (Swift.Error?) -> ())
   
   #if compiler(>=5.3) && $AsyncAwait
   func switchCamera(position: AVFoundation.AVCaptureDevice.Position, isMirror: Swift.Bool) async throws
   #endif
 
+  func getBypassOutput() -> ConnectLiveSDK.VideoCapturerOutput?
 }
 public protocol RemoteVideo : AnyObject {
   var id: Swift.Int { get }
@@ -287,6 +293,10 @@ public enum DisconnectReason {
     get
   }
 }
+public protocol VideoCapturerOutput {
+  func willOutputPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, time: CoreMedia.CMTime, orientation: UIKit.UIInterfaceOrientation)
+  func willOutputSampleBuffer(_ sampleBuffer: CoreMedia.CMSampleBuffer, orientation: UIKit.UIInterfaceOrientation)
+}
 @_hasMissingDesignatedInitializers final public class ConnectLive {
   public typealias ProvisionResult = (Swift.Int, Swift.String)
   public typealias ProvisionCallback = (_ code: Swift.Int, _ message: Swift.String) -> ()
@@ -295,10 +305,10 @@ public enum DisconnectReason {
   }
   
   #if compiler(>=5.3) && $AsyncAwait
-  public static func signIn(serviceId: Swift.String, key: Swift.String, secret: Swift.String, endpoint: Swift.String = "") async -> ConnectLiveSDK.ConnectLive.ProvisionResult
+  public static func signIn(serviceId: Swift.String, serviceSecret: Swift.String, endpoint: Swift.String = "") async -> ConnectLiveSDK.ConnectLive.ProvisionResult
   #endif
 
-  public static func signIn(serviceId: Swift.String, key: Swift.String, secret: Swift.String, endpoint: Swift.String = "", completion: @escaping ConnectLiveSDK.ConnectLive.ProvisionCallback)
+  public static func signIn(serviceId: Swift.String, serviceSecret: Swift.String, endpoint: Swift.String = "", completion: @escaping ConnectLiveSDK.ConnectLive.ProvisionCallback)
   
   #if compiler(>=5.3) && $AsyncAwait
   public static func signIn(serviceId: Swift.String, token: Swift.String, endpoint: Swift.String = "") async -> ConnectLiveSDK.ConnectLive.ProvisionResult
@@ -313,7 +323,7 @@ public enum DisconnectReason {
   public static func setAudioSessionWithCurrentCategory()
   @objc deinit
 }
-@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class UIRenderView : UIKit.UIView {
+@objc @_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) open class UIRenderView : UIKit.UIView {
   @_Concurrency.MainActor(unsafe) public var uuid: Swift.String {
     get
   }
@@ -325,6 +335,7 @@ public enum DisconnectReason {
     get
     set
   }
+  @_Concurrency.MainActor(unsafe) @objc required dynamic public init?(coder: Foundation.NSCoder)
   @objc deinit
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func didMoveToSuperview()
   @_Concurrency.MainActor(unsafe) @objc override dynamic public func removeFromSuperview()
