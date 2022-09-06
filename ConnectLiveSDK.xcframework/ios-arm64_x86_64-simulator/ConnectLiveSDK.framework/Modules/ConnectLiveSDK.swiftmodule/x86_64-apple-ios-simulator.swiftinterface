@@ -250,7 +250,12 @@ public protocol LocalMedia : AnyObject {
   func start() async throws
   #endif
 
-  func stop()
+  func stop(completion: @escaping () -> Swift.Void)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  func stop() async
+  #endif
+
   func switchCamera(position: AVFoundation.AVCaptureDevice.Position, isMirror: Swift.Bool, completion: @escaping (Swift.Error?) -> ())
   
   #if compiler(>=5.3) && $AsyncAwait
@@ -317,7 +322,7 @@ public protocol VideoCapturerOutput {
   public static func signIn(serviceId: Swift.String, token: Swift.String, endpoint: Swift.String = "", completion: @escaping ConnectLiveSDK.ConnectLive.ProvisionCallback)
   public static func signOut()
   public static func createRoom(config: ConnectLiveSDK.Config?, delegate: ConnectLiveSDK.RoomDelegate) -> ConnectLiveSDK.Room
-  public static func createLocalMedia(options: ConnectLiveSDK.LocalMediaOptions) -> ConnectLiveSDK.LocalMedia?
+  public static func createLocalMedia(config: ConnectLiveSDK.Config) -> ConnectLiveSDK.LocalMedia?
   public static func createScreenShare(appGroup: Swift.String) throws -> ConnectLiveSDK.ScreenShare
   public static func setAudioSessionConfiguration(category: AVFAudio.AVAudioSession.Category, mode: AVFAudio.AVAudioSession.Mode, options: AVFAudio.AVAudioSession.CategoryOptions, delegate: ConnectLiveSDK.AudioSessionDelegate? = nil)
   public static func setAudioSessionWithCurrentCategory()
