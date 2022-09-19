@@ -23,7 +23,7 @@ ConnectLive SDK 2.2.0 : Swift 5.6.1, Xcode : 13.4
 Xcode > File > Add Packages
 ```
 Name: ConnectLiveSDK
-Version Rules: 2.2.0 - Next Minor
+Version Rules: 2.2 - Next Minor
 Location: https://github.com/kakaoi-clive/ios-sdk.git
 ```
 
@@ -85,8 +85,8 @@ import ConnectLiveSDK
  
 func signIn() {
     // 인증수행
-    ConnectLive.signIn(serviceId: "serviceId",
-                       serviceSecret: "serviceSecret") { [weak self] code, message in
+    ConnectLive.signIn(serviceId: "ICLEXMPLPUBL",
+                       serviceSecret: "ICLEXMPLPUBL0KEY:YOUR0SRVC0SECRET") { [weak self] code, message in
         if code == 0 {
             // 인증성공
         } else {
@@ -104,7 +104,6 @@ iOS의 경우 os의 오디오 세션을 별도 설정해 주어야 합니다.
 ConnectLive.setAudioSessionConfiguration(category: AVAudioSession.Category,
                                          mode: AVAudioSession.Mode,
                                          options: AVAudioSession.CategoryOptions,
-                                         ioBufferDuration: TimeInterval = 0.06,
                                          delegate: AudioSessionDelegate? = nil)
 ```
 
@@ -198,10 +197,10 @@ struct LocalMediaOptions {
     var cameraCaptureHeight: Int = 480
 
     /// 오디오 타입
-    var audioType: AudioProcessingType = .voice
+    static var audioType: AudioProcessingType = .voice
 
     /// AGC 유무
-    var autoGain: Bool = false
+    static var autoGain: Bool = false
 }
 ```
 
@@ -339,7 +338,7 @@ config.mediaOptions.audio = true
 config.mediaOptions.video = true
   
 // 로컬 미디어 생성
-let media = ConnectLive.createLocalMedia(options: config.mediaOptions)
+let media = ConnectLive.createLocalMedia(config: config)
 
 
 // 미디어 객체내 기능 호출
@@ -511,7 +510,7 @@ protocol RoomDelegate {
     /// 룸 연결 해제 이벤트
     ///
     /// 직접 연결을 해제한 경우와 오류로 연결이 해제된 경우 모두 이벤트가 발생합니다.
-    func onDisconnected(reason: DisconnectReason)
+    func onDisconnected()
      
     /// 에러 이벤트
     ///

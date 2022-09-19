@@ -136,7 +136,8 @@ public protocol RoomDelegate : AnyObject {
   func onRemoteAudioUnsubscribed(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   func onRemoteVideoStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteVideo: ConnectLiveSDK.RemoteVideo)
   func onRemoteAudioStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
-  func onUserMessage(senderId: Swift.String, message: Swift.String)
+  func onUserMessage(senderId: Swift.String, message: Swift.String, type: Swift.String)
+  func onStat(stat: ConnectLiveSDK.QualityStat)
 }
 extension ConnectLiveSDK.RoomDelegate {
   public func onConnecting(progress: Swift.Float)
@@ -150,7 +151,8 @@ extension ConnectLiveSDK.RoomDelegate {
   public func onRemoteAudioUnsubscribed(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   public func onRemoteVideoStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteVideo: ConnectLiveSDK.RemoteVideo)
   public func onRemoteAudioStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
-  public func onUserMessage(senderId: Swift.String, message: Swift.String)
+  public func onUserMessage(senderId: Swift.String, message: Swift.String, type: Swift.String)
+  public func onStat(stat: ConnectLiveSDK.QualityStat)
 }
 public struct Config {
   public var mediaOptions: ConnectLiveSDK.LocalMediaOptions
@@ -200,10 +202,10 @@ public protocol Room : AnyObject {
   func getVideoOccupants() -> [Swift.String]
   func getAudioOccupants() -> [Swift.String]
   func setMuted(_ isMuted: Swift.Bool)
-  func sendUserMessage(participantIds: [Swift.String], message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  func sendUserMessage(targets: [Swift.String], message: Swift.String, type: Swift.String, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
   
   #if compiler(>=5.3) && $AsyncAwait
-  func sendUserMessage(participantIds: [Swift.String], message: Swift.String) async -> Swift.Result<Swift.Void, Swift.Error>
+  func sendUserMessage(targets: [Swift.String], message: Swift.String, type: Swift.String) async -> Swift.Result<Swift.Void, Swift.Error>
   #endif
 
   func requestScreenShare(appGroup: Swift.String, extensionName: Swift.String, completion: @escaping (ConnectLiveSDK.ScreenShareData.ExtensionStatus) -> Swift.Void) throws
@@ -226,17 +228,35 @@ public protocol Room : AnyObject {
   #endif
 
   func getRemoteStatsReport(completion: @escaping ([Swift.String : ConnectLiveSDK.Statistics]) -> ())
-  
-  #if compiler(>=5.3) && $AsyncAwait
-  func getLocalQualityStatsReport() async -> ConnectLiveSDK.QualitySession?
-  #endif
-
-  
-  #if compiler(>=5.3) && $AsyncAwait
-  func getRemoteQualityStatsReport() async -> ConnectLiveSDK.QualitySession?
-  #endif
-
   func restartIce()
+}
+extension ConnectLiveSDK.Room {
+  public func sendUserMessage(targets: [Swift.String], message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  public func sendUserMessage(targets: [Swift.String], message: Swift.String) async -> Swift.Result<Swift.Void, Swift.Error>
+  #endif
+
+  @available(*, deprecated, renamed: "sendUserMessage(targets:message:completion:)")
+  public func sendUserMessage(participantIds: [Swift.String], message: Swift.String, completion: @escaping (Swift.Result<Swift.Void, Swift.Error>) -> Swift.Void)
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(*, deprecated, renamed: "sendUserMessage(targets:message:)")
+  public func sendUserMessage(participantIds: [Swift.String], message: Swift.String) async -> Swift.Result<Swift.Void, Swift.Error>
+  #endif
+
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(*, deprecated, message: "use RoomDelegate.onStat() instead")
+  public func getLocalQualityStatsReport() async -> ConnectLiveSDK.QualitySession?
+  #endif
+
+  
+  #if compiler(>=5.3) && $AsyncAwait
+  @available(*, deprecated, message: "use RoomDelegate.onStat() instead")
+  public func getRemoteQualityStatsReport() async -> ConnectLiveSDK.QualitySession?
+  #endif
+
 }
 public protocol LocalMedia : AnyObject {
   var video: ConnectLiveSDK.LocalVideo { get }
@@ -301,6 +321,9 @@ public enum DisconnectReason {
 public protocol VideoCapturerOutput {
   func willOutputPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, time: CoreMedia.CMTime, orientation: UIKit.UIInterfaceOrientation)
   func willOutputSampleBuffer(_ sampleBuffer: CoreMedia.CMSampleBuffer, orientation: UIKit.UIInterfaceOrientation)
+}
+public struct QualityStat {
+  public var sessions: [ConnectLiveSDK.QualitySession]
 }
 @_hasMissingDesignatedInitializers final public class ConnectLive {
   public typealias ProvisionResult = (Swift.Int, Swift.String)
