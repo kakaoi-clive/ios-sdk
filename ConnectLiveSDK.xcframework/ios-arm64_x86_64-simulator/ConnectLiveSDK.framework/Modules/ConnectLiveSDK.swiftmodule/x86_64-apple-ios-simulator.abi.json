@@ -21429,7 +21429,7 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/RoomService.swift",
       "kind": "BooleanLiteral",
-      "offset": 18575,
+      "offset": 18767,
       "length": 5,
       "value": "false"
     },
@@ -21886,7 +21886,7 @@
       "kind": "IntegerLiteral",
       "offset": 757,
       "length": 3,
-      "value": "720"
+      "value": "800"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Capturer\/BypassCapturer.swift",
