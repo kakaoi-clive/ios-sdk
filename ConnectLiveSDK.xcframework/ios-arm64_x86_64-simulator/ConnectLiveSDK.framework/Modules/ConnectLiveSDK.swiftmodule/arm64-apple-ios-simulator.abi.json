@@ -11312,14 +11312,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV03srcE5LevelSivp",
-            "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV03srcE5LevelSivp",
+            "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV03srcE5LevelSdvp",
+            "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV03srcE5LevelSdvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11335,14 +11335,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV03srcE5LevelSivg",
-                "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV03srcE5LevelSivg",
+                "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV03srcE5LevelSdvg",
+                "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV03srcE5LevelSdvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12132,14 +12132,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "Int",
-                "printedName": "Swift.Int",
-                "usr": "s:Si"
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV10audioLevelSivp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV10audioLevelSivp",
+            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV10audioLevelSdvp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV10audioLevelSdvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -12155,14 +12155,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "Int",
-                    "printedName": "Swift.Int",
-                    "usr": "s:Si"
+                    "name": "Double",
+                    "printedName": "Swift.Double",
+                    "usr": "s:Sd"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV10audioLevelSivg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV10audioLevelSivg",
+                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV10audioLevelSdvg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV10audioLevelSdvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"

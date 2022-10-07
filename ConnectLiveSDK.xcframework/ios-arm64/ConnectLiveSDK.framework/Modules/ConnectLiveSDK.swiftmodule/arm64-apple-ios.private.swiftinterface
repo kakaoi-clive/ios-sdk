@@ -336,7 +336,7 @@ public struct LocalAudioMetrics {
   public let bytesSent: Swift.UInt
   public let packetsSent: Swift.UInt
   public let packetsSentPerSecond: Swift.UInt
-  public let srcAudioLevel: Swift.Int
+  public let srcAudioLevel: Swift.Double
 }
 public struct LocalVideoMetrics {
   public let participantId: Swift.String
@@ -358,7 +358,7 @@ public struct RemoteAudioMetrics {
   public let totalSamplesReceived: Swift.UInt
   public let packetsLost: Swift.UInt
   public let packetsLostPerSecond: Swift.UInt
-  public let audioLevel: Swift.Int
+  public let audioLevel: Swift.Double
 }
 public struct RemoteVideoMetrics {
   public var participantId: Swift.String
