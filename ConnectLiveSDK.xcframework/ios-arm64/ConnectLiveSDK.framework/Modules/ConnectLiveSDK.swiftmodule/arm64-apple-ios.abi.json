@@ -10414,14 +10414,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSuvp",
-            "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSuvp",
+            "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSivp",
+            "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -10437,14 +10437,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSuvg",
-                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSuvg",
+                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSivg",
+                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -10461,14 +10461,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSuvs",
-                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSuvs",
+                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSivs",
+                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSivs",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -10485,8 +10485,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSuvM",
-                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSuvM",
+                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSivM",
+                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableIncomingBitrateSivM",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -10500,14 +10500,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSuvp",
-            "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSuvp",
+            "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSivp",
+            "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -10523,14 +10523,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSuvg",
-                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSuvg",
+                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSivg",
+                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -10547,14 +10547,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSuvs",
-                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSuvs",
+                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSivs",
+                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSivs",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -10571,8 +10571,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSuvM",
-                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSuvM",
+                "usr": "s:14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSivM",
+                "mangledName": "$s14ConnectLiveSDK16LocalQualityStatV24availableOutgoingBitrateSivM",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -10906,14 +10906,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSuvp",
-            "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSuvp",
+            "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSivp",
+            "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -10929,14 +10929,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSuvg",
-                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSuvg",
+                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSivg",
+                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -10953,14 +10953,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSuvs",
-                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSuvs",
+                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSivs",
+                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSivs",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -10977,8 +10977,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSuvM",
-                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSuvM",
+                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSivM",
+                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableIncomingBitrateSivM",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -10992,14 +10992,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSuvp",
-            "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSuvp",
+            "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSivp",
+            "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -11015,14 +11015,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSuvg",
-                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSuvg",
+                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSivg",
+                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11039,14 +11039,14 @@
                   },
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSuvs",
-                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSuvs",
+                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSivs",
+                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSivs",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "set"
@@ -11063,8 +11063,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSuvM",
-                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSuvM",
+                "usr": "s:14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSivM",
+                "mangledName": "$s14ConnectLiveSDK17RemoteQualityStatV24availableOutgoingBitrateSivM",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "_modify"
@@ -11180,14 +11180,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV9bytesSentSuvp",
-            "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV9bytesSentSuvp",
+            "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV9bytesSentSivp",
+            "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV9bytesSentSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11203,14 +11203,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV9bytesSentSuvg",
-                "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV9bytesSentSuvg",
+                "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV9bytesSentSivg",
+                "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV9bytesSentSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11224,14 +11224,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV11packetsSentSuvp",
-            "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV11packetsSentSuvp",
+            "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV11packetsSentSivp",
+            "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV11packetsSentSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11247,14 +11247,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV11packetsSentSuvg",
-                "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV11packetsSentSuvg",
+                "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV11packetsSentSivg",
+                "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV11packetsSentSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11268,14 +11268,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV20packetsSentPerSecondSuvp",
-            "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV20packetsSentPerSecondSuvp",
+            "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV20packetsSentPerSecondSivp",
+            "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV20packetsSentPerSecondSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11291,14 +11291,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV20packetsSentPerSecondSuvg",
-                "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV20packetsSentPerSecondSuvg",
+                "usr": "s:14ConnectLiveSDK17LocalAudioMetricsV20packetsSentPerSecondSivg",
+                "mangledName": "$s14ConnectLiveSDK17LocalAudioMetricsV20packetsSentPerSecondSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11502,14 +11502,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV9bytesSentSuvp",
-            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV9bytesSentSuvp",
+            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV9bytesSentSivp",
+            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV9bytesSentSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11525,14 +11525,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV9bytesSentSuvg",
-                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV9bytesSentSuvg",
+                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV9bytesSentSivg",
+                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV9bytesSentSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11546,14 +11546,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV11packetsSentSuvp",
-            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV11packetsSentSuvp",
+            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV11packetsSentSivp",
+            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV11packetsSentSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11569,14 +11569,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV11packetsSentSuvg",
-                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV11packetsSentSuvg",
+                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV11packetsSentSivg",
+                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV11packetsSentSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11590,14 +11590,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV20packetsSentPerSecondSuvp",
-            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV20packetsSentPerSecondSuvp",
+            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV20packetsSentPerSecondSivp",
+            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV20packetsSentPerSecondSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11613,14 +11613,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV20packetsSentPerSecondSuvg",
-                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV20packetsSentPerSecondSuvg",
+                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV20packetsSentPerSecondSivg",
+                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV20packetsSentPerSecondSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11634,14 +11634,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV13framesEncodedSuvp",
-            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV13framesEncodedSuvp",
+            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV13framesEncodedSivp",
+            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV13framesEncodedSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11657,14 +11657,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV13framesEncodedSuvg",
-                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV13framesEncodedSuvg",
+                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV13framesEncodedSivg",
+                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV13framesEncodedSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11678,14 +11678,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV10framesSentSuvp",
-            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV10framesSentSuvp",
+            "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV10framesSentSivp",
+            "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV10framesSentSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11701,14 +11701,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV10framesSentSuvg",
-                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV10framesSentSuvg",
+                "usr": "s:14ConnectLiveSDK17LocalVideoMetricsV10framesSentSivg",
+                "mangledName": "$s14ConnectLiveSDK17LocalVideoMetricsV10framesSentSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -11956,14 +11956,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV13bytesReceivedSuvp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV13bytesReceivedSuvp",
+            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV13bytesReceivedSivp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV13bytesReceivedSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -11979,14 +11979,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV13bytesReceivedSuvg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV13bytesReceivedSuvg",
+                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV13bytesReceivedSivg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV13bytesReceivedSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12000,14 +12000,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV20totalSamplesReceivedSuvp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV20totalSamplesReceivedSuvp",
+            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV20totalSamplesReceivedSivp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV20totalSamplesReceivedSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -12023,14 +12023,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV20totalSamplesReceivedSuvg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV20totalSamplesReceivedSuvg",
+                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV20totalSamplesReceivedSivg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV20totalSamplesReceivedSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12044,14 +12044,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV11packetsLostSuvp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV11packetsLostSuvp",
+            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV11packetsLostSivp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV11packetsLostSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -12067,14 +12067,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV11packetsLostSuvg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV11packetsLostSuvg",
+                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV11packetsLostSivg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV11packetsLostSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12088,14 +12088,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV20packetsLostPerSecondSuvp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV20packetsLostPerSecondSuvp",
+            "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV20packetsLostPerSecondSivp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV20packetsLostPerSecondSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -12111,14 +12111,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV20packetsLostPerSecondSuvg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV20packetsLostPerSecondSuvg",
+                "usr": "s:14ConnectLiveSDK18RemoteAudioMetricsV20packetsLostPerSecondSivg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteAudioMetricsV20packetsLostPerSecondSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12445,14 +12445,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV13bytesReceivedSuvp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV13bytesReceivedSuvp",
+            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV13bytesReceivedSivp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV13bytesReceivedSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -12468,14 +12468,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV13bytesReceivedSuvg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV13bytesReceivedSuvg",
+                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV13bytesReceivedSivg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV13bytesReceivedSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12489,14 +12489,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV14framesReceivedSuvp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV14framesReceivedSuvp",
+            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV14framesReceivedSivp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV14framesReceivedSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -12512,14 +12512,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV14framesReceivedSuvg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV14framesReceivedSuvg",
+                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV14framesReceivedSivg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV14framesReceivedSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12533,14 +12533,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV13framesDecodedSuvp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV13framesDecodedSuvp",
+            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV13framesDecodedSivp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV13framesDecodedSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -12556,14 +12556,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV13framesDecodedSuvg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV13framesDecodedSuvg",
+                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV13framesDecodedSivg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV13framesDecodedSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12621,14 +12621,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV11packetsLostSuvp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV11packetsLostSuvp",
+            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV11packetsLostSivp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV11packetsLostSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -12644,14 +12644,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV11packetsLostSuvg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV11packetsLostSuvg",
+                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV11packetsLostSivg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV11packetsLostSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -12665,14 +12665,14 @@
             "children": [
               {
                 "kind": "TypeNominal",
-                "name": "UInt",
-                "printedName": "Swift.UInt",
-                "usr": "s:Su"
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV20packetsLostPerSecondSuvp",
-            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV20packetsLostPerSecondSuvp",
+            "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV20packetsLostPerSecondSivp",
+            "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV20packetsLostPerSecondSivp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasStorage",
@@ -12688,14 +12688,14 @@
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV20packetsLostPerSecondSuvg",
-                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV20packetsLostPerSecondSuvg",
+                "usr": "s:14ConnectLiveSDK18RemoteVideoMetricsV20packetsLostPerSecondSivg",
+                "mangledName": "$s14ConnectLiveSDK18RemoteVideoMetricsV20packetsLostPerSecondSivg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17905,21 +17905,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.UInt?",
+                "printedName": "Swift.Int?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK13QualityMetricV9bytesSentSuSgvp",
-            "mangledName": "$s14ConnectLiveSDK13QualityMetricV9bytesSentSuSgvp",
+            "usr": "s:14ConnectLiveSDK13QualityMetricV9bytesSentSiSgvp",
+            "mangledName": "$s14ConnectLiveSDK13QualityMetricV9bytesSentSiSgvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -17938,21 +17938,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.UInt?",
+                    "printedName": "Swift.Int?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UInt",
-                        "printedName": "Swift.UInt",
-                        "usr": "s:Su"
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK13QualityMetricV9bytesSentSuSgvg",
-                "mangledName": "$s14ConnectLiveSDK13QualityMetricV9bytesSentSuSgvg",
+                "usr": "s:14ConnectLiveSDK13QualityMetricV9bytesSentSiSgvg",
+                "mangledName": "$s14ConnectLiveSDK13QualityMetricV9bytesSentSiSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -17967,21 +17967,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.UInt?",
+                "printedName": "Swift.Int?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK13QualityMetricV11packetsSentSuSgvp",
-            "mangledName": "$s14ConnectLiveSDK13QualityMetricV11packetsSentSuSgvp",
+            "usr": "s:14ConnectLiveSDK13QualityMetricV11packetsSentSiSgvp",
+            "mangledName": "$s14ConnectLiveSDK13QualityMetricV11packetsSentSiSgvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -18000,21 +18000,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.UInt?",
+                    "printedName": "Swift.Int?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UInt",
-                        "printedName": "Swift.UInt",
-                        "usr": "s:Su"
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK13QualityMetricV11packetsSentSuSgvg",
-                "mangledName": "$s14ConnectLiveSDK13QualityMetricV11packetsSentSuSgvg",
+                "usr": "s:14ConnectLiveSDK13QualityMetricV11packetsSentSiSgvg",
+                "mangledName": "$s14ConnectLiveSDK13QualityMetricV11packetsSentSiSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -18153,21 +18153,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.UInt?",
+                "printedName": "Swift.Int?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK13QualityMetricV13framesEncodedSuSgvp",
-            "mangledName": "$s14ConnectLiveSDK13QualityMetricV13framesEncodedSuSgvp",
+            "usr": "s:14ConnectLiveSDK13QualityMetricV13framesEncodedSiSgvp",
+            "mangledName": "$s14ConnectLiveSDK13QualityMetricV13framesEncodedSiSgvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -18186,21 +18186,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.UInt?",
+                    "printedName": "Swift.Int?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UInt",
-                        "printedName": "Swift.UInt",
-                        "usr": "s:Su"
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK13QualityMetricV13framesEncodedSuSgvg",
-                "mangledName": "$s14ConnectLiveSDK13QualityMetricV13framesEncodedSuSgvg",
+                "usr": "s:14ConnectLiveSDK13QualityMetricV13framesEncodedSiSgvg",
+                "mangledName": "$s14ConnectLiveSDK13QualityMetricV13framesEncodedSiSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -18215,21 +18215,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.UInt?",
+                "printedName": "Swift.Int?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK13QualityMetricV10framesSentSuSgvp",
-            "mangledName": "$s14ConnectLiveSDK13QualityMetricV10framesSentSuSgvp",
+            "usr": "s:14ConnectLiveSDK13QualityMetricV10framesSentSiSgvp",
+            "mangledName": "$s14ConnectLiveSDK13QualityMetricV10framesSentSiSgvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -18248,21 +18248,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.UInt?",
+                    "printedName": "Swift.Int?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UInt",
-                        "printedName": "Swift.UInt",
-                        "usr": "s:Su"
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK13QualityMetricV10framesSentSuSgvg",
-                "mangledName": "$s14ConnectLiveSDK13QualityMetricV10framesSentSuSgvg",
+                "usr": "s:14ConnectLiveSDK13QualityMetricV10framesSentSiSgvg",
+                "mangledName": "$s14ConnectLiveSDK13QualityMetricV10framesSentSiSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -18401,21 +18401,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.UInt?",
+                "printedName": "Swift.Int?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK13QualityMetricV13bytesReceivedSuSgvp",
-            "mangledName": "$s14ConnectLiveSDK13QualityMetricV13bytesReceivedSuSgvp",
+            "usr": "s:14ConnectLiveSDK13QualityMetricV13bytesReceivedSiSgvp",
+            "mangledName": "$s14ConnectLiveSDK13QualityMetricV13bytesReceivedSiSgvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -18434,21 +18434,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.UInt?",
+                    "printedName": "Swift.Int?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UInt",
-                        "printedName": "Swift.UInt",
-                        "usr": "s:Su"
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK13QualityMetricV13bytesReceivedSuSgvg",
-                "mangledName": "$s14ConnectLiveSDK13QualityMetricV13bytesReceivedSuSgvg",
+                "usr": "s:14ConnectLiveSDK13QualityMetricV13bytesReceivedSiSgvg",
+                "mangledName": "$s14ConnectLiveSDK13QualityMetricV13bytesReceivedSiSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -18463,21 +18463,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.UInt?",
+                "printedName": "Swift.Int?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK13QualityMetricV11packetsLostSuSgvp",
-            "mangledName": "$s14ConnectLiveSDK13QualityMetricV11packetsLostSuSgvp",
+            "usr": "s:14ConnectLiveSDK13QualityMetricV11packetsLostSiSgvp",
+            "mangledName": "$s14ConnectLiveSDK13QualityMetricV11packetsLostSiSgvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -18496,21 +18496,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.UInt?",
+                    "printedName": "Swift.Int?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UInt",
-                        "printedName": "Swift.UInt",
-                        "usr": "s:Su"
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK13QualityMetricV11packetsLostSuSgvg",
-                "mangledName": "$s14ConnectLiveSDK13QualityMetricV11packetsLostSuSgvg",
+                "usr": "s:14ConnectLiveSDK13QualityMetricV11packetsLostSiSgvg",
+                "mangledName": "$s14ConnectLiveSDK13QualityMetricV11packetsLostSiSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -18525,21 +18525,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.UInt?",
+                "printedName": "Swift.Int?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK13QualityMetricV20totalSamplesReceivedSuSgvp",
-            "mangledName": "$s14ConnectLiveSDK13QualityMetricV20totalSamplesReceivedSuSgvp",
+            "usr": "s:14ConnectLiveSDK13QualityMetricV20totalSamplesReceivedSiSgvp",
+            "mangledName": "$s14ConnectLiveSDK13QualityMetricV20totalSamplesReceivedSiSgvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -18558,21 +18558,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.UInt?",
+                    "printedName": "Swift.Int?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UInt",
-                        "printedName": "Swift.UInt",
-                        "usr": "s:Su"
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK13QualityMetricV20totalSamplesReceivedSuSgvg",
-                "mangledName": "$s14ConnectLiveSDK13QualityMetricV20totalSamplesReceivedSuSgvg",
+                "usr": "s:14ConnectLiveSDK13QualityMetricV20totalSamplesReceivedSiSgvg",
+                "mangledName": "$s14ConnectLiveSDK13QualityMetricV20totalSamplesReceivedSiSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -18649,21 +18649,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.UInt?",
+                "printedName": "Swift.Int?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK13QualityMetricV14framesReceivedSuSgvp",
-            "mangledName": "$s14ConnectLiveSDK13QualityMetricV14framesReceivedSuSgvp",
+            "usr": "s:14ConnectLiveSDK13QualityMetricV14framesReceivedSiSgvp",
+            "mangledName": "$s14ConnectLiveSDK13QualityMetricV14framesReceivedSiSgvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -18682,21 +18682,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.UInt?",
+                    "printedName": "Swift.Int?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UInt",
-                        "printedName": "Swift.UInt",
-                        "usr": "s:Su"
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK13QualityMetricV14framesReceivedSuSgvg",
-                "mangledName": "$s14ConnectLiveSDK13QualityMetricV14framesReceivedSuSgvg",
+                "usr": "s:14ConnectLiveSDK13QualityMetricV14framesReceivedSiSgvg",
+                "mangledName": "$s14ConnectLiveSDK13QualityMetricV14framesReceivedSiSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -18711,21 +18711,21 @@
               {
                 "kind": "TypeNominal",
                 "name": "Optional",
-                "printedName": "Swift.UInt?",
+                "printedName": "Swift.Int?",
                 "children": [
                   {
                     "kind": "TypeNominal",
-                    "name": "UInt",
-                    "printedName": "Swift.UInt",
-                    "usr": "s:Su"
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
                   }
                 ],
                 "usr": "s:Sq"
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK13QualityMetricV13framesDecodedSuSgvp",
-            "mangledName": "$s14ConnectLiveSDK13QualityMetricV13framesDecodedSuSgvp",
+            "usr": "s:14ConnectLiveSDK13QualityMetricV13framesDecodedSiSgvp",
+            "mangledName": "$s14ConnectLiveSDK13QualityMetricV13framesDecodedSiSgvp",
             "moduleName": "ConnectLiveSDK",
             "declAttributes": [
               "HasInitialValue",
@@ -18744,21 +18744,21 @@
                   {
                     "kind": "TypeNominal",
                     "name": "Optional",
-                    "printedName": "Swift.UInt?",
+                    "printedName": "Swift.Int?",
                     "children": [
                       {
                         "kind": "TypeNominal",
-                        "name": "UInt",
-                        "printedName": "Swift.UInt",
-                        "usr": "s:Su"
+                        "name": "Int",
+                        "printedName": "Swift.Int",
+                        "usr": "s:Si"
                       }
                     ],
                     "usr": "s:Sq"
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK13QualityMetricV13framesDecodedSuSgvg",
-                "mangledName": "$s14ConnectLiveSDK13QualityMetricV13framesDecodedSuSgvg",
+                "usr": "s:14ConnectLiveSDK13QualityMetricV13framesDecodedSiSgvg",
+                "mangledName": "$s14ConnectLiveSDK13QualityMetricV13framesDecodedSiSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "implicit": true,
                 "accessorKind": "get"
@@ -21014,6 +21014,13 @@
       "value": "1"
     },
     {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Model\/Config.swift",
+      "kind": "IntegerLiteral",
+      "offset": 1268,
+      "length": 1,
+      "value": "1"
+    },
+    {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/Model\/RemoveStream.swift",
       "kind": "StringLiteral",
       "offset": 396,
@@ -21289,49 +21296,49 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Model\/QualityStat.swift",
       "kind": "IntegerLiteral",
-      "offset": 487,
+      "offset": 486,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Model\/QualityStat.swift",
       "kind": "IntegerLiteral",
-      "offset": 537,
+      "offset": 535,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Model\/QualityStat.swift",
       "kind": "IntegerLiteral",
-      "offset": 604,
+      "offset": 602,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Model\/QualityStat.swift",
       "kind": "Array",
-      "offset": 658,
+      "offset": 656,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Model\/QualityStat.swift",
       "kind": "Array",
-      "offset": 713,
+      "offset": 711,
       "length": 2,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Model\/QualityStat.swift",
       "kind": "IntegerLiteral",
-      "offset": 764,
+      "offset": 761,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Model\/QualityStat.swift",
       "kind": "IntegerLiteral",
-      "offset": 814,
+      "offset": 810,
       "length": 1,
       "value": "0"
     },

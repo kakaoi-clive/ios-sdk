@@ -320,33 +320,33 @@ public struct LocalQualityStat {
   public var index: Swift.Int
   public var audioMetrics: [ConnectLiveSDK.LocalAudioMetrics]
   public var videoMetrics: [ConnectLiveSDK.LocalVideoMetrics]
-  public var availableIncomingBitrate: Swift.UInt
-  public var availableOutgoingBitrate: Swift.UInt
+  public var availableIncomingBitrate: Swift.Int
+  public var availableOutgoingBitrate: Swift.Int
 }
 public struct RemoteQualityStat {
   public var index: Swift.Int
   public var audioMetrics: [ConnectLiveSDK.RemoteAudioMetrics]
   public var videoMetrics: [ConnectLiveSDK.RemoteVideoMetrics]
-  public var availableIncomingBitrate: Swift.UInt
-  public var availableOutgoingBitrate: Swift.UInt
+  public var availableIncomingBitrate: Swift.Int
+  public var availableOutgoingBitrate: Swift.Int
 }
 public struct LocalAudioMetrics {
   public let participantId: Swift.String
   public let streamId: Swift.Int
-  public let bytesSent: Swift.UInt
-  public let packetsSent: Swift.UInt
-  public let packetsSentPerSecond: Swift.UInt
+  public let bytesSent: Swift.Int
+  public let packetsSent: Swift.Int
+  public let packetsSentPerSecond: Swift.Int
   public let srcAudioLevel: Swift.Double
 }
 public struct LocalVideoMetrics {
   public let participantId: Swift.String
   public let streamId: Swift.Int
   public let profile: Swift.String
-  public let bytesSent: Swift.UInt
-  public let packetsSent: Swift.UInt
-  public let packetsSentPerSecond: Swift.UInt
-  public let framesEncoded: Swift.UInt
-  public let framesSent: Swift.UInt
+  public let bytesSent: Swift.Int
+  public let packetsSent: Swift.Int
+  public let packetsSentPerSecond: Swift.Int
+  public let framesEncoded: Swift.Int
+  public let framesSent: Swift.Int
   public let pliCount: Swift.Int
   public let srcFrames: Swift.Int
 }
@@ -354,22 +354,22 @@ public struct RemoteAudioMetrics {
   public let participantId: Swift.String
   public let streamId: Swift.Int
   public let receiverId: Swift.Int
-  public let bytesReceived: Swift.UInt
-  public let totalSamplesReceived: Swift.UInt
-  public let packetsLost: Swift.UInt
-  public let packetsLostPerSecond: Swift.UInt
+  public let bytesReceived: Swift.Int
+  public let totalSamplesReceived: Swift.Int
+  public let packetsLost: Swift.Int
+  public let packetsLostPerSecond: Swift.Int
   public let audioLevel: Swift.Double
 }
 public struct RemoteVideoMetrics {
   public var participantId: Swift.String
   public var streamId: Swift.Int
   public var receiverId: Swift.Int
-  public let bytesReceived: Swift.UInt
-  public let framesReceived: Swift.UInt
-  public let framesDecoded: Swift.UInt
+  public let bytesReceived: Swift.Int
+  public let framesReceived: Swift.Int
+  public let framesDecoded: Swift.Int
   public let pliCount: Swift.Int
-  public let packetsLost: Swift.UInt
-  public let packetsLostPerSecond: Swift.UInt
+  public let packetsLost: Swift.Int
+  public let packetsLostPerSecond: Swift.Int
 }
 @_hasMissingDesignatedInitializers final public class ConnectLive {
   public typealias ProvisionResult = (Swift.Int, Swift.String)
@@ -520,10 +520,10 @@ public enum ConnectLiveError : Foundation.LocalizedError {
 public struct QualityMetric : Swift.Encodable, Swift.Hashable {
   public let type: ConnectLiveSDK.StreamMediaType
   public let streamId: Swift.Int
-  public var bytesSent: Swift.UInt? {
+  public var bytesSent: Swift.Int? {
     get
   }
-  public var packetsSent: Swift.UInt? {
+  public var packetsSent: Swift.Int? {
     get
   }
   public var srcAudioLevel: Swift.Double? {
@@ -532,10 +532,10 @@ public struct QualityMetric : Swift.Encodable, Swift.Hashable {
   public var srcFrames: Swift.Int? {
     get
   }
-  public var framesEncoded: Swift.UInt? {
+  public var framesEncoded: Swift.Int? {
     get
   }
-  public var framesSent: Swift.UInt? {
+  public var framesSent: Swift.Int? {
     get
   }
   public var profile: ConnectLiveSDK.VideoProfileType? {
@@ -544,22 +544,22 @@ public struct QualityMetric : Swift.Encodable, Swift.Hashable {
   public var receiverId: Swift.Int? {
     get
   }
-  public var bytesReceived: Swift.UInt? {
+  public var bytesReceived: Swift.Int? {
     get
   }
-  public var packetsLost: Swift.UInt? {
+  public var packetsLost: Swift.Int? {
     get
   }
-  public var totalSamplesReceived: Swift.UInt? {
+  public var totalSamplesReceived: Swift.Int? {
     get
   }
   public var audioLevel: Swift.Double? {
     get
   }
-  public var framesReceived: Swift.UInt? {
+  public var framesReceived: Swift.Int? {
     get
   }
-  public var framesDecoded: Swift.UInt? {
+  public var framesDecoded: Swift.Int? {
     get
   }
   public func hash(into hasher: inout Swift.Hasher)
