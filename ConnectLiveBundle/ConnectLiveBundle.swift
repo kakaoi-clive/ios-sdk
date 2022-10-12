@@ -1,8 +1,10 @@
 //
-//  File.swift
-//  
+//  ConnectLiveBundle.swift
 //
-//  Created by chance.k on 2022/06/28.
 //
 
 import Foundation
+import ConnectLiveSDK
+
+// ConnectLiveSDK 와 하위 패키지들을 위한 더미 번들입니다.
+var version: String { ConnectLive.version }
