@@ -13897,7 +13897,7 @@
           {
             "kind": "Function",
             "name": "createScreenShare",
-            "printedName": "createScreenShare(appGroup:)",
+            "printedName": "createScreenShare(appGroup:hd:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13910,11 +13910,18 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Bool",
+                "printedName": "Swift.Bool",
+                "hasDefaultArg": true,
+                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:14ConnectLiveSDK0aB0C17createScreenShare8appGroupAA0eF0_pSS_tKFZ",
-            "mangledName": "$s14ConnectLiveSDK0aB0C17createScreenShare8appGroupAA0eF0_pSS_tKFZ",
+            "usr": "s:14ConnectLiveSDK0aB0C17createScreenShare8appGroup2hdAA0eF0_pSS_SbtKFZ",
+            "mangledName": "$s14ConnectLiveSDK0aB0C17createScreenShare8appGroup2hdAA0eF0_pSS_SbtKFZ",
             "moduleName": "ConnectLiveSDK",
             "static": true,
             "declAttributes": [
@@ -21214,28 +21221,28 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "IntegerLiteral",
-      "offset": 369,
+      "offset": 386,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "IntegerLiteral",
-      "offset": 408,
+      "offset": 425,
       "length": 2,
       "value": "15"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "IntegerLiteral",
-      "offset": 534,
+      "offset": 551,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "StringLiteral",
-      "offset": 4552,
+      "offset": 4600,
       "length": 2,
       "value": "\"\""
     },
@@ -22101,6 +22108,13 @@
       "value": "\"\""
     },
     {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Client\/ConnectLive.swift",
+      "kind": "BooleanLiteral",
+      "offset": 4011,
+      "length": 5,
+      "value": "false"
+    },
+    {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Renderer\/UIRenderView.swift",
       "kind": "BooleanLiteral",
       "offset": 611,
@@ -22229,14 +22243,14 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/Model\/AddStream.swift",
       "kind": "StringLiteral",
-      "offset": 676,
+      "offset": 678,
       "length": 5,
       "value": "\"2.0\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/Model\/AddStream.swift",
       "kind": "StringLiteral",
-      "offset": 746,
+      "offset": 748,
       "length": 16,
       "value": "\"Room.AddStream\""
     },
@@ -22649,7 +22663,7 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "FloatLiteral",
-      "offset": 7340,
+      "offset": 7358,
       "length": 4,
       "value": "0.06"
     },
