@@ -1,4 +1,4 @@
-# Kakao-i ConnectLive SDK
+# Kakao-i ConnectLive iOS SDK
 
 # 2.2
 ## 2.2.3
@@ -28,3 +28,7 @@
 ## 2.2.0
 Kakao-i ConnectLive 2.0 서비스의 iOS SDK 기본 배포 버전입니다.
 
+
+# 2.1
+## 2.1.x
+Kakao-i ConnectLive 2.0 서비스를 미리 살펴볼수 있는 프리뷰 버전으로 현재는 지원하지 않습니다.
