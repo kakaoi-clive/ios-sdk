@@ -13897,7 +13897,7 @@
           {
             "kind": "Function",
             "name": "createScreenShare",
-            "printedName": "createScreenShare(appGroup:hd:)",
+            "printedName": "createScreenShare(appGroup:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -13910,18 +13910,11 @@
                 "name": "String",
                 "printedName": "Swift.String",
                 "usr": "s:SS"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Bool",
-                "printedName": "Swift.Bool",
-                "hasDefaultArg": true,
-                "usr": "s:Sb"
               }
             ],
             "declKind": "Func",
-            "usr": "s:14ConnectLiveSDK0aB0C17createScreenShare8appGroup2hdAA0eF0_pSS_SbtKFZ",
-            "mangledName": "$s14ConnectLiveSDK0aB0C17createScreenShare8appGroup2hdAA0eF0_pSS_SbtKFZ",
+            "usr": "s:14ConnectLiveSDK0aB0C17createScreenShare8appGroupAA0eF0_pSS_tKFZ",
+            "mangledName": "$s14ConnectLiveSDK0aB0C17createScreenShare8appGroupAA0eF0_pSS_tKFZ",
             "moduleName": "ConnectLiveSDK",
             "static": true,
             "declAttributes": [
@@ -21230,7 +21223,7 @@
       "kind": "IntegerLiteral",
       "offset": 425,
       "length": 2,
-      "value": "15"
+      "value": "10"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
@@ -21438,7 +21431,7 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Model\/LocalMediaOptions.swift",
       "kind": "Dictionary",
-      "offset": 2135,
+      "offset": 2143,
       "length": 3,
       "value": "[]"
     },
@@ -22106,13 +22099,6 @@
       "offset": 2886,
       "length": 2,
       "value": "\"\""
-    },
-    {
-      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Client\/ConnectLive.swift",
-      "kind": "BooleanLiteral",
-      "offset": 4011,
-      "length": 5,
-      "value": "false"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Renderer\/UIRenderView.swift",

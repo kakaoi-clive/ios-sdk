@@ -407,7 +407,7 @@ public struct RemoteVideoMetrics {
   public static func signOut()
   public static func createRoom(config: ConnectLiveSDK.Config?, delegate: ConnectLiveSDK.RoomDelegate) -> ConnectLiveSDK.Room
   public static func createLocalMedia(config: ConnectLiveSDK.Config) -> ConnectLiveSDK.LocalMedia?
-  public static func createScreenShare(appGroup: Swift.String, hd: Swift.Bool = false) throws -> ConnectLiveSDK.ScreenShare
+  public static func createScreenShare(appGroup: Swift.String) throws -> ConnectLiveSDK.ScreenShare
   public static func setAudioSessionConfiguration(category: AVFAudio.AVAudioSession.Category, mode: AVFAudio.AVAudioSession.Mode, options: AVFAudio.AVAudioSession.CategoryOptions, delegate: ConnectLiveSDK.AudioSessionDelegate? = nil)
   public static func setAudioSessionWithCurrentCategory()
   @objc deinit
