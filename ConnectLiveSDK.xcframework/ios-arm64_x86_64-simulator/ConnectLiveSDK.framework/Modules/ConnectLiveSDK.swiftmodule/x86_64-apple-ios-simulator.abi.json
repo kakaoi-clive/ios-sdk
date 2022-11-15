@@ -13983,6 +13983,68 @@
           },
           {
             "kind": "Function",
+            "name": "setAudioSessionConfiguration",
+            "printedName": "setAudioSessionConfiguration(category:mode:options:ioBufferDuration:delegate:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Category",
+                "printedName": "AVFAudio.AVAudioSession.Category",
+                "usr": "c:@T@AVAudioSessionCategory"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Mode",
+                "printedName": "AVFAudio.AVAudioSession.Mode",
+                "usr": "c:@T@AVAudioSessionMode"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "CategoryOptions",
+                "printedName": "AVFAudio.AVAudioSession.CategoryOptions",
+                "usr": "c:@E@AVAudioSessionCategoryOptions"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Double",
+                "printedName": "Swift.Double",
+                "usr": "s:Sd"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ConnectLiveSDK.AudioSessionDelegate?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "AudioSessionDelegate",
+                    "printedName": "ConnectLiveSDK.AudioSessionDelegate",
+                    "usr": "c:@M@ConnectLiveSDK@objc(pl)AudioSessionDelegate"
+                  }
+                ],
+                "hasDefaultArg": true,
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ConnectLiveSDK0aB0C28setAudioSessionConfiguration8category4mode7options16ioBufferDuration8delegateySo07AVAudioF8Categorya_So0oF4ModeaSo0ofP7OptionsVSdAA0eF8Delegate_pSgtFZ",
+            "mangledName": "$s14ConnectLiveSDK0aB0C28setAudioSessionConfiguration8category4mode7options16ioBufferDuration8delegateySo07AVAudioF8Categorya_So0oF4ModeaSo0ofP7OptionsVSdAA0eF8Delegate_pSgtFZ",
+            "moduleName": "ConnectLiveSDK",
+            "static": true,
+            "declAttributes": [
+              "Final",
+              "AccessControl",
+              "RawDocComment"
+            ],
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
             "name": "setAudioSessionWithCurrentCategory",
             "printedName": "setAudioSessionWithCurrentCategory()",
             "children": [
@@ -22152,7 +22214,7 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/RoomService.swift",
       "kind": "BooleanLiteral",
-      "offset": 18767,
+      "offset": 18783,
       "length": 5,
       "value": "false"
     },
@@ -22978,28 +23040,28 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/NotificationModel\/OnMessage.swift",
       "kind": "StringLiteral",
-      "offset": 298,
-      "length": 6,
-      "value": "\"Kick\""
+      "offset": 300,
+      "length": 8,
+      "value": "\"Kicked\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/NotificationModel\/OnMessage.swift",
       "kind": "StringLiteral",
-      "offset": 331,
-      "length": 12,
-      "value": "\"Inactivate\""
+      "offset": 336,
+      "length": 13,
+      "value": "\"Inactivated\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/NotificationModel\/OnMessage.swift",
       "kind": "StringLiteral",
-      "offset": 371,
+      "offset": 377,
       "length": 13,
       "value": "\"UserMessage\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/NotificationModel\/OnMessage.swift",
       "kind": "StringLiteral",
-      "offset": 413,
+      "offset": 419,
       "length": 14,
       "value": "\"RecordFailed\""
     },
@@ -23020,28 +23082,28 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/NotificationModel\/OnMessage.swift",
       "kind": "StringLiteral",
-      "offset": 298,
-      "length": 6,
-      "value": "\"Kick\""
+      "offset": 300,
+      "length": 8,
+      "value": "\"Kicked\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/NotificationModel\/OnMessage.swift",
       "kind": "StringLiteral",
-      "offset": 331,
-      "length": 12,
-      "value": "\"Inactivate\""
+      "offset": 336,
+      "length": 13,
+      "value": "\"Inactivated\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/NotificationModel\/OnMessage.swift",
       "kind": "StringLiteral",
-      "offset": 371,
+      "offset": 377,
       "length": 13,
       "value": "\"UserMessage\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/NotificationModel\/OnMessage.swift",
       "kind": "StringLiteral",
-      "offset": 413,
+      "offset": 419,
       "length": 14,
       "value": "\"RecordFailed\""
     },
