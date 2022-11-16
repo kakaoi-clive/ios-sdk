@@ -264,7 +264,7 @@ SWIFT_PROTOCOL("_TtP14ConnectLiveSDK20AudioSessionDelegate_")
 /// 오디오세션 인터럽트 해제
 - (void)didEndInterruptionWithShouldResumeSession:(BOOL)shouldResumeSession;
 /// 오디오세션 장치 변경
-- (void)didChangeRouteWithReason:(AVAudioSessionRouteChangeReason)reason previousRoute:(AVAudioSessionRouteDescription * _Nonnull)previousRoute;
+- (void)didChangeRouteWithReason:(AVAudioSessionRouteChangeReason)reason currentRoute:(AVAudioSessionRouteDescription * _Nonnull)currentRoute previousRoute:(AVAudioSessionRouteDescription * _Nonnull)previousRoute;
 /// 오디오세션 미디어서버 종료
 - (void)mediaServerTerminated;
 /// 오디오세션 미디어서버 초기화
@@ -278,6 +278,7 @@ SWIFT_PROTOCOL("_TtP14ConnectLiveSDK20AudioSessionDelegate_")
 - (void)willSetActiveWithActive:(BOOL)active;
 - (void)didSetActiveWithActive:(BOOL)active;
 - (void)failedToSetActiveWithActive:(BOOL)active error:(NSError * _Nonnull)error;
+- (void)didChangeRouteWithReason:(AVAudioSessionRouteChangeReason)reason previousRoute:(AVAudioSessionRouteDescription * _Nonnull)previousRoute SWIFT_DEPRECATED_MSG("use AudioSessionDelegate.didChangeRoute(reason: currentRoute: previousRoute:) instead");
 @end
 
 

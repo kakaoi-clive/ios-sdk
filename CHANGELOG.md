@@ -1,6 +1,14 @@
 # Kakao-i ConnectLive iOS SDK
 
 # 2.2
+## 2.2.4
+* 스트림 pause, profile 설정 async 메쏘드가 추가되었습니다.
+* AudioSessionDelegate didChangeRoute() 메쏘드가 currentRoute 정보를 포함하도록 파라미터가 추가되었습니다.
+* 강제 퇴장으로 종료시 reason이 destroyed 로 전달되는 이슈가 수정되었습니다.
+* 캡처 fps가 로컬미디어 config 설정에 추가되었습니다. 
+* 일부 버그가 수정되었습니다.
+
+
 ## 2.2.3
 * 비디오 인코딩 설정, 최대 bandwidth 설정 루틴이 수정되었습니다.
 * 구독한 비디오의 프로파일 변경이 실패하는 이슈가 수정되었습니다.

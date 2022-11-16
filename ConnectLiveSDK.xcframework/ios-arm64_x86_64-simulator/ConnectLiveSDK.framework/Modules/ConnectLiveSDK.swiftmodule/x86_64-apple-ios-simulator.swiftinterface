@@ -28,7 +28,7 @@ public protocol ScreenShare {
 @objc public protocol AudioSessionDelegate {
   @objc optional func didBeginInterruption()
   @objc optional func didEndInterruption(shouldResumeSession: Swift.Bool)
-  @objc optional func didChangeRoute(reason: AVFAudio.AVAudioSession.RouteChangeReason, previousRoute: AVFAudio.AVAudioSessionRouteDescription)
+  @objc optional func didChangeRoute(reason: AVFAudio.AVAudioSession.RouteChangeReason, currentRoute: AVFAudio.AVAudioSessionRouteDescription, previousRoute: AVFAudio.AVAudioSessionRouteDescription)
   @objc optional func mediaServerTerminated()
   @objc optional func mediaServerReset()
   @objc optional func didChangeCanPlayOrRecord(canPlayOrRecord: Swift.Bool)
@@ -37,6 +37,8 @@ public protocol ScreenShare {
   @objc optional func willSetActive(active: Swift.Bool)
   @objc optional func didSetActive(active: Swift.Bool)
   @objc optional func failedToSetActive(active: Swift.Bool, error: Swift.Error)
+  @available(*, deprecated, message: "use AudioSessionDelegate.didChangeRoute(reason: currentRoute: previousRoute:) instead")
+  @objc optional func didChangeRoute(reason: AVFAudio.AVAudioSession.RouteChangeReason, previousRoute: AVFAudio.AVAudioSessionRouteDescription)
 }
 public enum ResponseErrorCode : Swift.Int {
   case unauthorized
@@ -110,6 +112,7 @@ public struct LocalMediaOptions {
   public var fileName: Swift.String
   public var videoWidth: Swift.Int
   public var videoHeight: Swift.Int
+  public var videoFPS: Swift.Int
   public enum DevelopOption : Swift.String {
     case fps
     case videoStreamSubType
@@ -289,6 +292,12 @@ public protocol RemoteVideo : AnyObject {
   func detach()
   func setPaused(_ pause: Swift.Bool) throws
   func setProfile(_ profile: ConnectLiveSDK.VideoProfileType) throws
+  #if compiler(>=5.3) && $AsyncAwait
+  func setPausedAsync(_ pause: Swift.Bool) async throws
+  #endif
+  #if compiler(>=5.3) && $AsyncAwait
+  func setProfileAsync(_ profile: ConnectLiveSDK.VideoProfileType) async throws
+  #endif
 }
 extension ConnectLiveSDK.RemoteVideo {
   public var isEnabled: Swift.Bool {
@@ -321,15 +330,18 @@ public struct LocalQualityStat {
   public var index: Swift.Int
   public var audioMetrics: [ConnectLiveSDK.LocalAudioMetrics]
   public var videoMetrics: [ConnectLiveSDK.LocalVideoMetrics]
-  public var availableIncomingBitrate: Swift.Int
-  public var availableOutgoingBitrate: Swift.Int
+  public var bytesSentPerInterval: Swift.Int
+  public var packetsSentPerInterval: Swift.Int
+  public var currentRTT: Swift.Double
 }
 public struct RemoteQualityStat {
   public var index: Swift.Int
   public var audioMetrics: [ConnectLiveSDK.RemoteAudioMetrics]
   public var videoMetrics: [ConnectLiveSDK.RemoteVideoMetrics]
   public var availableIncomingBitrate: Swift.Int
-  public var availableOutgoingBitrate: Swift.Int
+  public var bytesReceivedPerInterval: Swift.Int
+  public var packetsReceivedPerInterval: Swift.Int
+  public var currentRTT: Swift.Double
 }
 public struct LocalAudioMetrics {
   public let participantId: Swift.String
@@ -350,6 +362,9 @@ public struct LocalVideoMetrics {
   public let framesSent: Swift.Int
   public let pliCount: Swift.Int
   public let srcFrames: Swift.Int
+  public let frameWidth: Swift.Int
+  public let frameHeight: Swift.Int
+  public let framesPerSecond: Swift.Int
 }
 public struct RemoteAudioMetrics {
   public let participantId: Swift.String
@@ -362,15 +377,18 @@ public struct RemoteAudioMetrics {
   public let audioLevel: Swift.Double
 }
 public struct RemoteVideoMetrics {
-  public var participantId: Swift.String
-  public var streamId: Swift.Int
-  public var receiverId: Swift.Int
+  public let participantId: Swift.String
+  public let streamId: Swift.Int
+  public let receiverId: Swift.Int
   public let bytesReceived: Swift.Int
   public let framesReceived: Swift.Int
   public let framesDecoded: Swift.Int
   public let pliCount: Swift.Int
   public let packetsLost: Swift.Int
   public let packetsLostPerInterval: Swift.Int
+  public let frameWidth: Swift.Int
+  public let frameHeight: Swift.Int
+  public let framesPerSecond: Swift.Int
 }
 @_hasMissingDesignatedInitializers final public class ConnectLive {
   public typealias ProvisionResult = (Swift.Int, Swift.String)
