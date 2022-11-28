@@ -8547,6 +8547,64 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "externalVideoSource",
+            "printedName": "externalVideoSource",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ConnectLiveSDK.VideoCapturerSource?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "VideoCapturerSource",
+                    "printedName": "ConnectLiveSDK.VideoCapturerSource",
+                    "usr": "s:14ConnectLiveSDK19VideoCapturerSourceP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ConnectLiveSDK10LocalMediaP19externalVideoSourceAA0g8CapturerH0_pSgvp",
+            "mangledName": "$s14ConnectLiveSDK10LocalMediaP19externalVideoSourceAA0g8CapturerH0_pSgvp",
+            "moduleName": "ConnectLiveSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ConnectLiveSDK.VideoCapturerSource?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "VideoCapturerSource",
+                        "printedName": "ConnectLiveSDK.VideoCapturerSource",
+                        "usr": "s:14ConnectLiveSDK19VideoCapturerSourceP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ConnectLiveSDK10LocalMediaP19externalVideoSourceAA0g8CapturerH0_pSgvg",
+                "mangledName": "$s14ConnectLiveSDK10LocalMediaP19externalVideoSourceAA0g8CapturerH0_pSgvg",
+                "moduleName": "ConnectLiveSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalMedia>",
+                "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalMedia>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "start",
             "printedName": "start(completion:)",
@@ -8779,39 +8837,6 @@
               "RawDocComment"
             ],
             "throwing": true,
-            "reqNewWitnessTableEntry": true,
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
-            "name": "getBypassOutput",
-            "printedName": "getBypassOutput()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "ConnectLiveSDK.VideoCapturerOutput?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "VideoCapturerOutput",
-                    "printedName": "ConnectLiveSDK.VideoCapturerOutput",
-                    "usr": "s:14ConnectLiveSDK19VideoCapturerOutputP"
-                  }
-                ],
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:14ConnectLiveSDK10LocalMediaP15getBypassOutputAA013VideoCapturerH0_pSgyF",
-            "mangledName": "$s14ConnectLiveSDK10LocalMediaP15getBypassOutputAA013VideoCapturerH0_pSgyF",
-            "moduleName": "ConnectLiveSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalMedia>",
-            "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalMedia>",
-            "protocolReq": true,
-            "declAttributes": [
-              "RawDocComment"
-            ],
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
           }
@@ -9410,6 +9435,48 @@
                 "declKind": "Accessor",
                 "usr": "s:14ConnectLiveSDK11RemoteVideoP12isSubscribedSbvg",
                 "mangledName": "$s14ConnectLiveSDK11RemoteVideoP12isSubscribedSbvg",
+                "moduleName": "ConnectLiveSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.RemoteVideo>",
+                "sugared_genericSig": "<Self where Self : ConnectLiveSDK.RemoteVideo>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "weight",
+            "printedName": "weight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ConnectLiveSDK11RemoteVideoP6weightSivp",
+            "mangledName": "$s14ConnectLiveSDK11RemoteVideoP6weightSivp",
+            "moduleName": "ConnectLiveSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ConnectLiveSDK11RemoteVideoP6weightSivg",
+                "mangledName": "$s14ConnectLiveSDK11RemoteVideoP6weightSivg",
                 "moduleName": "ConnectLiveSDK",
                 "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.RemoteVideo>",
                 "sugared_genericSig": "<Self where Self : ConnectLiveSDK.RemoteVideo>",
@@ -10050,13 +10117,13 @@
       },
       {
         "kind": "TypeDecl",
-        "name": "VideoCapturerOutput",
-        "printedName": "VideoCapturerOutput",
+        "name": "VideoCapturerSource",
+        "printedName": "VideoCapturerSource",
         "children": [
           {
             "kind": "Function",
-            "name": "willOutputPixelBuffer",
-            "printedName": "willOutputPixelBuffer(_:time:orientation:)",
+            "name": "didCapturePixelBuffer",
+            "printedName": "didCapturePixelBuffer(_:time:orientation:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10083,11 +10150,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14ConnectLiveSDK19VideoCapturerOutputP04willF11PixelBuffer_4time11orientationySo11CVBufferRefa_So6CMTimeaSo22UIInterfaceOrientationVtF",
-            "mangledName": "$s14ConnectLiveSDK19VideoCapturerOutputP04willF11PixelBuffer_4time11orientationySo11CVBufferRefa_So6CMTimeaSo22UIInterfaceOrientationVtF",
+            "usr": "s:14ConnectLiveSDK19VideoCapturerSourceP21didCapturePixelBuffer_4time11orientationySo11CVBufferRefa_So6CMTimeaSo22UIInterfaceOrientationVtF",
+            "mangledName": "$s14ConnectLiveSDK19VideoCapturerSourceP21didCapturePixelBuffer_4time11orientationySo11CVBufferRefa_So6CMTimeaSo22UIInterfaceOrientationVtF",
             "moduleName": "ConnectLiveSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.VideoCapturerOutput>",
-            "sugared_genericSig": "<Self where Self : ConnectLiveSDK.VideoCapturerOutput>",
+            "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.VideoCapturerSource>",
+            "sugared_genericSig": "<Self where Self : ConnectLiveSDK.VideoCapturerSource>",
             "protocolReq": true,
             "declAttributes": [
               "RawDocComment"
@@ -10097,8 +10164,8 @@
           },
           {
             "kind": "Function",
-            "name": "willOutputSampleBuffer",
-            "printedName": "willOutputSampleBuffer(_:orientation:)",
+            "name": "didCaptureSampleBuffer",
+            "printedName": "didCaptureSampleBuffer(_:orientation:)",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -10119,11 +10186,11 @@
               }
             ],
             "declKind": "Func",
-            "usr": "s:14ConnectLiveSDK19VideoCapturerOutputP04willF12SampleBuffer_11orientationySo08CMSampleI3Refa_So22UIInterfaceOrientationVtF",
-            "mangledName": "$s14ConnectLiveSDK19VideoCapturerOutputP04willF12SampleBuffer_11orientationySo08CMSampleI3Refa_So22UIInterfaceOrientationVtF",
+            "usr": "s:14ConnectLiveSDK19VideoCapturerSourceP22didCaptureSampleBuffer_11orientationySo08CMSampleJ3Refa_So22UIInterfaceOrientationVtF",
+            "mangledName": "$s14ConnectLiveSDK19VideoCapturerSourceP22didCaptureSampleBuffer_11orientationySo08CMSampleJ3Refa_So22UIInterfaceOrientationVtF",
             "moduleName": "ConnectLiveSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.VideoCapturerOutput>",
-            "sugared_genericSig": "<Self where Self : ConnectLiveSDK.VideoCapturerOutput>",
+            "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.VideoCapturerSource>",
+            "sugared_genericSig": "<Self where Self : ConnectLiveSDK.VideoCapturerSource>",
             "protocolReq": true,
             "declAttributes": [
               "RawDocComment"
@@ -10133,8 +10200,8 @@
           }
         ],
         "declKind": "Protocol",
-        "usr": "s:14ConnectLiveSDK19VideoCapturerOutputP",
-        "mangledName": "$s14ConnectLiveSDK19VideoCapturerOutputP",
+        "usr": "s:14ConnectLiveSDK19VideoCapturerSourceP",
+        "mangledName": "$s14ConnectLiveSDK19VideoCapturerSourceP",
         "moduleName": "ConnectLiveSDK",
         "declAttributes": [
           "AccessControl"
@@ -13983,68 +14050,6 @@
           },
           {
             "kind": "Function",
-            "name": "setAudioSessionConfiguration",
-            "printedName": "setAudioSessionConfiguration(category:mode:options:ioBufferDuration:delegate:)",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "Void",
-                "printedName": "()"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Category",
-                "printedName": "AVFAudio.AVAudioSession.Category",
-                "usr": "c:@T@AVAudioSessionCategory"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Mode",
-                "printedName": "AVFAudio.AVAudioSession.Mode",
-                "usr": "c:@T@AVAudioSessionMode"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "CategoryOptions",
-                "printedName": "AVFAudio.AVAudioSession.CategoryOptions",
-                "usr": "c:@E@AVAudioSessionCategoryOptions"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Double",
-                "printedName": "Swift.Double",
-                "usr": "s:Sd"
-              },
-              {
-                "kind": "TypeNominal",
-                "name": "Optional",
-                "printedName": "ConnectLiveSDK.AudioSessionDelegate?",
-                "children": [
-                  {
-                    "kind": "TypeNominal",
-                    "name": "AudioSessionDelegate",
-                    "printedName": "ConnectLiveSDK.AudioSessionDelegate",
-                    "usr": "c:@M@ConnectLiveSDK@objc(pl)AudioSessionDelegate"
-                  }
-                ],
-                "hasDefaultArg": true,
-                "usr": "s:Sq"
-              }
-            ],
-            "declKind": "Func",
-            "usr": "s:14ConnectLiveSDK0aB0C28setAudioSessionConfiguration8category4mode7options16ioBufferDuration8delegateySo07AVAudioF8Categorya_So0oF4ModeaSo0ofP7OptionsVSdAA0eF8Delegate_pSgtFZ",
-            "mangledName": "$s14ConnectLiveSDK0aB0C28setAudioSessionConfiguration8category4mode7options16ioBufferDuration8delegateySo07AVAudioF8Categorya_So0oF4ModeaSo0ofP7OptionsVSdAA0eF8Delegate_pSgtFZ",
-            "moduleName": "ConnectLiveSDK",
-            "static": true,
-            "declAttributes": [
-              "Final",
-              "AccessControl",
-              "RawDocComment"
-            ],
-            "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Function",
             "name": "setAudioSessionWithCurrentCategory",
             "printedName": "setAudioSessionWithCurrentCategory()",
             "children": [
@@ -17375,6 +17380,100 @@
             ]
           },
           {
+            "kind": "Var",
+            "name": "weight",
+            "printedName": "weight",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ConnectLiveSDK10LocalVideoP6weightSivp",
+            "mangledName": "$s14ConnectLiveSDK10LocalVideoP6weightSivp",
+            "moduleName": "ConnectLiveSDK",
+            "protocolReq": true,
+            "declAttributes": [
+              "RawDocComment"
+            ],
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ConnectLiveSDK10LocalVideoP6weightSivg",
+                "mangledName": "$s14ConnectLiveSDK10LocalVideoP6weightSivg",
+                "moduleName": "ConnectLiveSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalVideo>",
+                "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalVideo>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Int",
+                    "printedName": "Swift.Int",
+                    "usr": "s:Si"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ConnectLiveSDK10LocalVideoP6weightSivs",
+                "mangledName": "$s14ConnectLiveSDK10LocalVideoP6weightSivs",
+                "moduleName": "ConnectLiveSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalVideo>",
+                "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalVideo>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ConnectLiveSDK10LocalVideoP6weightSivM",
+                "mangledName": "$s14ConnectLiveSDK10LocalVideoP6weightSivM",
+                "moduleName": "ConnectLiveSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalVideo>",
+                "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalVideo>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
+              }
+            ]
+          },
+          {
             "kind": "Function",
             "name": "attach",
             "printedName": "attach(_:)",
@@ -17616,6 +17715,59 @@
             "declKind": "Func",
             "usr": "s:14ConnectLiveSDK10LocalVideoPAAE10getEnabledSbyF",
             "mangledName": "$s14ConnectLiveSDK10LocalVideoPAAE10getEnabledSbyF",
+            "moduleName": "ConnectLiveSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalVideo>",
+            "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalVideo>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "setWeight",
+            "printedName": "setWeight(_:)",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              },
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ConnectLiveSDK10LocalVideoPAAE9setWeightyySiF",
+            "mangledName": "$s14ConnectLiveSDK10LocalVideoPAAE9setWeightyySiF",
+            "moduleName": "ConnectLiveSDK",
+            "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalVideo>",
+            "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalVideo>",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "isFromExtension": true,
+            "funcSelfKind": "NonMutating"
+          },
+          {
+            "kind": "Function",
+            "name": "getWeight",
+            "printedName": "getWeight()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Int",
+                "printedName": "Swift.Int",
+                "usr": "s:Si"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:14ConnectLiveSDK10LocalVideoPAAE9getWeightSiyF",
+            "mangledName": "$s14ConnectLiveSDK10LocalVideoPAAE9getWeightSiyF",
             "moduleName": "ConnectLiveSDK",
             "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalVideo>",
             "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalVideo>",
@@ -21297,7 +21449,7 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "StringLiteral",
-      "offset": 4600,
+      "offset": 4599,
       "length": 2,
       "value": "\"\""
     },
@@ -21391,6 +21543,13 @@
       "offset": 445,
       "length": 5,
       "value": "false"
+    },
+    {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Stream\/LocalVideoStream.swift",
+      "kind": "IntegerLiteral",
+      "offset": 484,
+      "length": 1,
+      "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Room\/Model\/DestroySessionRequest.swift",
@@ -22025,7 +22184,7 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Common\/CommonUtils.swift",
       "kind": "StringLiteral",
-      "offset": 11376,
+      "offset": 12150,
       "length": 2,
       "value": "\"\""
     },
@@ -22123,14 +22282,14 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/Model\/ConfigureStream.swift",
       "kind": "StringLiteral",
-      "offset": 421,
+      "offset": 446,
       "length": 5,
       "value": "\"2.0\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/Model\/ConfigureStream.swift",
       "kind": "StringLiteral",
-      "offset": 491,
+      "offset": 516,
       "length": 22,
       "value": "\"Room.ConfigureStream\""
     },
@@ -22214,7 +22373,7 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/RoomService.swift",
       "kind": "BooleanLiteral",
-      "offset": 18783,
+      "offset": 19540,
       "length": 5,
       "value": "false"
     },
@@ -22291,14 +22450,14 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/Model\/AddStream.swift",
       "kind": "StringLiteral",
-      "offset": 678,
+      "offset": 702,
       "length": 5,
       "value": "\"2.0\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Session\/Model\/AddStream.swift",
       "kind": "StringLiteral",
-      "offset": 748,
+      "offset": 772,
       "length": 16,
       "value": "\"Room.AddStream\""
     },
@@ -22534,6 +22693,13 @@
       "value": "false"
     },
     {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Stream\/RemoteVideoStream.swift",
+      "kind": "IntegerLiteral",
+      "offset": 523,
+      "length": 1,
+      "value": "0"
+    },
+    {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/RemoteParticipantService.swift",
       "kind": "Dictionary",
       "offset": 369,
@@ -22690,30 +22856,30 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "FloatLiteral",
-      "offset": 410,
+      "offset": 474,
       "length": 4,
       "value": "0.06"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "StringLiteral",
-      "offset": 505,
+      "offset": 628,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "StringLiteral",
-      "offset": 816,
-      "length": 22,
-      "value": "\"icl2.network.monitor\""
+      "offset": 656,
+      "length": 2,
+      "value": "\"\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
-      "kind": "FloatLiteral",
-      "offset": 7358,
-      "length": 4,
-      "value": "0.06"
+      "kind": "StringLiteral",
+      "offset": 967,
+      "length": 22,
+      "value": "\"icl2.network.monitor\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Capturer\/FileCapturer.swift",

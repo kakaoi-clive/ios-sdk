@@ -264,6 +264,7 @@ public protocol LocalMedia : AnyObject {
   var position: AVFoundation.AVCaptureDevice.Position { get set }
   var isMirror: Swift.Bool { get }
   var audioLevel: Swift.Int { get }
+  var externalVideoSource: ConnectLiveSDK.VideoCapturerSource? { get }
   func start(completion: @escaping (Swift.Error?) -> ())
   #if compiler(>=5.3) && $AsyncAwait
   func start() async throws
@@ -276,7 +277,6 @@ public protocol LocalMedia : AnyObject {
   #if compiler(>=5.3) && $AsyncAwait
   func switchCamera(position: AVFoundation.AVCaptureDevice.Position, isMirror: Swift.Bool) async throws
   #endif
-  func getBypassOutput() -> ConnectLiveSDK.VideoCapturerOutput?
 }
 public protocol RemoteVideo : AnyObject {
   var id: Swift.Int { get }
@@ -287,6 +287,7 @@ public protocol RemoteVideo : AnyObject {
   var pause: Swift.Bool { get set }
   var viewId: Swift.String { get }
   var isSubscribed: Swift.Bool { get }
+  var weight: Swift.Int { get }
   func attach(_ view: ConnectLiveSDK.UIRenderView)
   func detach(_ view: ConnectLiveSDK.UIRenderView)
   func detach()
@@ -318,9 +319,9 @@ public enum DisconnectReason {
     get
   }
 }
-public protocol VideoCapturerOutput {
-  func willOutputPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, time: CoreMedia.CMTime, orientation: UIKit.UIInterfaceOrientation)
-  func willOutputSampleBuffer(_ sampleBuffer: CoreMedia.CMSampleBuffer, orientation: UIKit.UIInterfaceOrientation)
+public protocol VideoCapturerSource {
+  func didCapturePixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, time: CoreMedia.CMTime, orientation: UIKit.UIInterfaceOrientation)
+  func didCaptureSampleBuffer(_ sampleBuffer: CoreMedia.CMSampleBuffer, orientation: UIKit.UIInterfaceOrientation)
 }
 public struct QualityStat {
   public var localStat: ConnectLiveSDK.LocalQualityStat?
@@ -409,7 +410,6 @@ public struct RemoteVideoMetrics {
   public static func createLocalMedia(config: ConnectLiveSDK.Config) -> ConnectLiveSDK.LocalMedia?
   public static func createScreenShare(appGroup: Swift.String) throws -> ConnectLiveSDK.ScreenShare
   public static func setAudioSessionConfiguration(category: AVFAudio.AVAudioSession.Category, mode: AVFAudio.AVAudioSession.Mode, options: AVFAudio.AVAudioSession.CategoryOptions, delegate: ConnectLiveSDK.AudioSessionDelegate? = nil)
-  public static func setAudioSessionConfiguration(category: AVFAudio.AVAudioSession.Category, mode: AVFAudio.AVAudioSession.Mode, options: AVFAudio.AVAudioSession.CategoryOptions, ioBufferDuration: Foundation.TimeInterval, delegate: ConnectLiveSDK.AudioSessionDelegate? = nil)
   public static func setAudioSessionWithCurrentCategory()
   @objc deinit
 }
@@ -498,6 +498,7 @@ public protocol LocalVideo : AnyObject {
   var active: Swift.Bool { get set }
   var extraValue: Swift.String { get set }
   var viewId: Swift.String { get }
+  var weight: Swift.Int { get set }
   func attach(_ view: ConnectLiveSDK.UIRenderView)
   func detach()
   var hd: Swift.Bool { get set }
@@ -507,6 +508,8 @@ extension ConnectLiveSDK.LocalVideo {
   public func getExtraValue() -> Swift.String
   public func setEnabled(_ enabled: Swift.Bool)
   public func getEnabled() -> Swift.Bool
+  public func setWeight(_ weight: Swift.Int)
+  public func getWeight() -> Swift.Int
 }
 public protocol RemoteAudio : AnyObject {
   var id: Swift.Int { get }
