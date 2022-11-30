@@ -264,7 +264,7 @@ public protocol LocalMedia : AnyObject {
   var position: AVFoundation.AVCaptureDevice.Position { get set }
   var isMirror: Swift.Bool { get }
   var audioLevel: Swift.Int { get }
-  var externalVideoSource: ConnectLiveSDK.VideoCapturerSource? { get }
+  var videoSource: ConnectLiveSDK.VideoCapturerSource? { get }
   func start(completion: @escaping (Swift.Error?) -> ())
   #if compiler(>=5.3) && $AsyncAwait
   func start() async throws

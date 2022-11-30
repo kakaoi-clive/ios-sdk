@@ -8548,8 +8548,8 @@
           },
           {
             "kind": "Var",
-            "name": "externalVideoSource",
-            "printedName": "externalVideoSource",
+            "name": "videoSource",
+            "printedName": "videoSource",
             "children": [
               {
                 "kind": "TypeNominal",
@@ -8567,8 +8567,8 @@
               }
             ],
             "declKind": "Var",
-            "usr": "s:14ConnectLiveSDK10LocalMediaP19externalVideoSourceAA0g8CapturerH0_pSgvp",
-            "mangledName": "$s14ConnectLiveSDK10LocalMediaP19externalVideoSourceAA0g8CapturerH0_pSgvp",
+            "usr": "s:14ConnectLiveSDK10LocalMediaP11videoSourceAA013VideoCapturerG0_pSgvp",
+            "mangledName": "$s14ConnectLiveSDK10LocalMediaP11videoSourceAA013VideoCapturerG0_pSgvp",
             "moduleName": "ConnectLiveSDK",
             "protocolReq": true,
             "accessors": [
@@ -8593,8 +8593,8 @@
                   }
                 ],
                 "declKind": "Accessor",
-                "usr": "s:14ConnectLiveSDK10LocalMediaP19externalVideoSourceAA0g8CapturerH0_pSgvg",
-                "mangledName": "$s14ConnectLiveSDK10LocalMediaP19externalVideoSourceAA0g8CapturerH0_pSgvg",
+                "usr": "s:14ConnectLiveSDK10LocalMediaP11videoSourceAA013VideoCapturerG0_pSgvg",
+                "mangledName": "$s14ConnectLiveSDK10LocalMediaP11videoSourceAA013VideoCapturerG0_pSgvg",
                 "moduleName": "ConnectLiveSDK",
                 "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalMedia>",
                 "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalMedia>",
