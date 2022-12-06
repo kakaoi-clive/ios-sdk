@@ -4118,6 +4118,43 @@
                 "moduleName": "ConnectLiveSDK"
               },
               {
+                "kind": "Var",
+                "name": "screenCast",
+                "printedName": "screenCast",
+                "children": [
+                  {
+                    "kind": "TypeFunc",
+                    "name": "Function",
+                    "printedName": "(ConnectLiveSDK.LocalMediaOptions.DevelopOption.Type) -> ConnectLiveSDK.LocalMediaOptions.DevelopOption",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "DevelopOption",
+                        "printedName": "ConnectLiveSDK.LocalMediaOptions.DevelopOption",
+                        "usr": "s:14ConnectLiveSDK17LocalMediaOptionsV13DevelopOptionO"
+                      },
+                      {
+                        "kind": "TypeNominal",
+                        "name": "Metatype",
+                        "printedName": "ConnectLiveSDK.LocalMediaOptions.DevelopOption.Type",
+                        "children": [
+                          {
+                            "kind": "TypeNominal",
+                            "name": "DevelopOption",
+                            "printedName": "ConnectLiveSDK.LocalMediaOptions.DevelopOption",
+                            "usr": "s:14ConnectLiveSDK17LocalMediaOptionsV13DevelopOptionO"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "declKind": "EnumElement",
+                "usr": "s:14ConnectLiveSDK17LocalMediaOptionsV13DevelopOptionO10screenCastyA2EmF",
+                "mangledName": "$s14ConnectLiveSDK17LocalMediaOptionsV13DevelopOptionO10screenCastyA2EmF",
+                "moduleName": "ConnectLiveSDK"
+              },
+              {
                 "kind": "Constructor",
                 "name": "init",
                 "printedName": "init(rawValue:)",
@@ -21449,7 +21486,7 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "StringLiteral",
-      "offset": 4599,
+      "offset": 4718,
       "length": 2,
       "value": "\"\""
     },
@@ -21473,6 +21510,13 @@
       "offset": 752,
       "length": 3,
       "value": "[]"
+    },
+    {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalMediaService.swift",
+      "kind": "BooleanLiteral",
+      "offset": 838,
+      "length": 5,
+      "value": "false"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalMediaService.swift",
@@ -22834,15 +22878,8 @@
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Capturer\/BypassCapturer.swift",
-      "kind": "IntegerLiteral",
-      "offset": 757,
-      "length": 3,
-      "value": "800"
-    },
-    {
-      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Capturer\/BypassCapturer.swift",
       "kind": "StringLiteral",
-      "offset": 559,
+      "offset": 377,
       "length": 14,
       "value": "\"ConnectLiveSDK.BypassCapturer\""
     },
