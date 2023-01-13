@@ -1,11 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7 (swiftlang-5.7.0.127.4 clang-1400.0.29.50)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ConnectLiveSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
 import Combine
 import CoreMIDI
+import CoreVideo
 import CryptoKit
 import Foundation
 import Network
@@ -116,6 +117,8 @@ public struct LocalMediaOptions {
   public enum DevelopOption : Swift.String {
     case fps
     case videoStreamSubType
+    case screenCast
+    case blendingFrame
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -142,7 +145,6 @@ public protocol RoomDelegate : AnyObject {
   func onRemoteVideoStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteVideo: ConnectLiveSDK.RemoteVideo)
   func onRemoteAudioStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   func onUserMessage(senderId: Swift.String, message: Swift.String, type: Swift.String)
-  func onStat(stat: ConnectLiveSDK.QualityStat)
 }
 extension ConnectLiveSDK.RoomDelegate {
   public func onConnecting(progress: Swift.Float)
@@ -157,19 +159,23 @@ extension ConnectLiveSDK.RoomDelegate {
   public func onRemoteVideoStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteVideo: ConnectLiveSDK.RemoteVideo)
   public func onRemoteAudioStateChanged(remoteParticipant: ConnectLiveSDK.RemoteParticipant, remoteAudio: ConnectLiveSDK.RemoteAudio)
   public func onUserMessage(senderId: Swift.String, message: Swift.String, type: Swift.String)
-  public func onStat(stat: ConnectLiveSDK.QualityStat)
 }
 public struct Config {
   public var mediaOptions: ConnectLiveSDK.LocalMediaOptions
   public var videoReceiverInitialCount: Swift.Int
   public var videoReceiverMaximumCount: Swift.Int
   public var videoReceiverGrowthRate: Swift.Int
-  public var qualityStatInterval: Swift.UInt
   public init()
 }
 public struct StatisticsReport {
+  public var statistics: [Swift.String : ConnectLiveSDK.Statistics]
+  public var timeStamp: CoreFoundation.CFTimeInterval
 }
 public struct Statistics {
+  public var id: Swift.String
+  public var type: Swift.String
+  public var timeStamp: CoreFoundation.CFTimeInterval
+  public var values: [Swift.String : Any]
 }
 public enum RoomStatus {
   case initialized
@@ -264,6 +270,7 @@ public protocol LocalMedia : AnyObject {
   var position: AVFoundation.AVCaptureDevice.Position { get set }
   var isMirror: Swift.Bool { get }
   var audioLevel: Swift.Int { get }
+  var videoSource: ConnectLiveSDK.VideoCapturerSource? { get }
   func start(completion: @escaping (Swift.Error?) -> ())
   #if compiler(>=5.3) && $AsyncAwait
   func start() async throws
@@ -276,7 +283,6 @@ public protocol LocalMedia : AnyObject {
   #if compiler(>=5.3) && $AsyncAwait
   func switchCamera(position: AVFoundation.AVCaptureDevice.Position, isMirror: Swift.Bool) async throws
   #endif
-  func getBypassOutput() -> ConnectLiveSDK.VideoCapturerOutput?
 }
 public protocol RemoteVideo : AnyObject {
   var id: Swift.Int { get }
@@ -287,6 +293,7 @@ public protocol RemoteVideo : AnyObject {
   var pause: Swift.Bool { get set }
   var viewId: Swift.String { get }
   var isSubscribed: Swift.Bool { get }
+  var sort: Swift.String { get }
   func attach(_ view: ConnectLiveSDK.UIRenderView)
   func detach(_ view: ConnectLiveSDK.UIRenderView)
   func detach()
@@ -318,77 +325,9 @@ public enum DisconnectReason {
     get
   }
 }
-public protocol VideoCapturerOutput {
-  func willOutputPixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, time: CoreMedia.CMTime, orientation: UIKit.UIInterfaceOrientation)
-  func willOutputSampleBuffer(_ sampleBuffer: CoreMedia.CMSampleBuffer, orientation: UIKit.UIInterfaceOrientation)
-}
-public struct QualityStat {
-  public var localStat: ConnectLiveSDK.LocalQualityStat?
-  public var remoteStat: ConnectLiveSDK.RemoteQualityStat?
-}
-public struct LocalQualityStat {
-  public var index: Swift.Int
-  public var audioMetrics: [ConnectLiveSDK.LocalAudioMetrics]
-  public var videoMetrics: [ConnectLiveSDK.LocalVideoMetrics]
-  public var bytesSentPerInterval: Swift.Int
-  public var packetsSentPerInterval: Swift.Int
-  public var currentRTT: Swift.Double
-}
-public struct RemoteQualityStat {
-  public var index: Swift.Int
-  public var audioMetrics: [ConnectLiveSDK.RemoteAudioMetrics]
-  public var videoMetrics: [ConnectLiveSDK.RemoteVideoMetrics]
-  public var availableIncomingBitrate: Swift.Int
-  public var bytesReceivedPerInterval: Swift.Int
-  public var packetsReceivedPerInterval: Swift.Int
-  public var currentRTT: Swift.Double
-}
-public struct LocalAudioMetrics {
-  public let participantId: Swift.String
-  public let streamId: Swift.Int
-  public let bytesSent: Swift.Int
-  public let packetsSent: Swift.Int
-  public let packetsSentPerInterval: Swift.Int
-  public let srcAudioLevel: Swift.Double
-}
-public struct LocalVideoMetrics {
-  public let participantId: Swift.String
-  public let streamId: Swift.Int
-  public let profile: Swift.String
-  public let bytesSent: Swift.Int
-  public let packetsSent: Swift.Int
-  public let packetsSentPerInterval: Swift.Int
-  public let framesEncoded: Swift.Int
-  public let framesSent: Swift.Int
-  public let pliCount: Swift.Int
-  public let srcFrames: Swift.Int
-  public let frameWidth: Swift.Int
-  public let frameHeight: Swift.Int
-  public let framesPerSecond: Swift.Int
-}
-public struct RemoteAudioMetrics {
-  public let participantId: Swift.String
-  public let streamId: Swift.Int
-  public let receiverId: Swift.Int
-  public let bytesReceived: Swift.Int
-  public let totalSamplesReceived: Swift.Int
-  public let packetsLost: Swift.Int
-  public let packetsLostPerInterval: Swift.Int
-  public let audioLevel: Swift.Double
-}
-public struct RemoteVideoMetrics {
-  public let participantId: Swift.String
-  public let streamId: Swift.Int
-  public let receiverId: Swift.Int
-  public let bytesReceived: Swift.Int
-  public let framesReceived: Swift.Int
-  public let framesDecoded: Swift.Int
-  public let pliCount: Swift.Int
-  public let packetsLost: Swift.Int
-  public let packetsLostPerInterval: Swift.Int
-  public let frameWidth: Swift.Int
-  public let frameHeight: Swift.Int
-  public let framesPerSecond: Swift.Int
+public protocol VideoCapturerSource {
+  func didCapturePixelBuffer(_ pixelBuffer: CoreVideo.CVPixelBuffer, time: CoreMedia.CMTime, orientation: UIKit.UIInterfaceOrientation)
+  func didCaptureSampleBuffer(_ sampleBuffer: CoreMedia.CMSampleBuffer, orientation: UIKit.UIInterfaceOrientation)
 }
 @_hasMissingDesignatedInitializers final public class ConnectLive {
   public typealias ProvisionResult = (Swift.Int, Swift.String)
@@ -397,11 +336,11 @@ public struct RemoteVideoMetrics {
     get
   }
   #if compiler(>=5.3) && $AsyncAwait
-  public static func signIn(serviceId: Swift.String, serviceSecret: Swift.String, endpoint: Swift.String = "") async -> ConnectLiveSDK.ConnectLive.ProvisionResult
+  public static func signIn(serviceId: Swift.String, serviceSecret: Swift.String, endpoint: Swift.String = "", callback: ConnectLiveSDK.ConnectLive.ProvisionCallback? = nil) async -> ConnectLiveSDK.ConnectLive.ProvisionResult
   #endif
   public static func signIn(serviceId: Swift.String, serviceSecret: Swift.String, endpoint: Swift.String = "", completion: @escaping ConnectLiveSDK.ConnectLive.ProvisionCallback)
   #if compiler(>=5.3) && $AsyncAwait
-  public static func signIn(serviceId: Swift.String, token: Swift.String, endpoint: Swift.String = "") async -> ConnectLiveSDK.ConnectLive.ProvisionResult
+  public static func signIn(serviceId: Swift.String, token: Swift.String, endpoint: Swift.String = "", callback: ConnectLiveSDK.ConnectLive.ProvisionCallback? = nil) async -> ConnectLiveSDK.ConnectLive.ProvisionResult
   #endif
   public static func signIn(serviceId: Swift.String, token: Swift.String, endpoint: Swift.String = "", completion: @escaping ConnectLiveSDK.ConnectLive.ProvisionCallback)
   public static func signOut()
@@ -491,12 +430,17 @@ public struct ProvisionData : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public protocol FrameBlender : AnyObject {
+  func blend(frame pixelBuffer: CoreVideo.CVPixelBuffer) -> CoreVideo.CVPixelBuffer?
+  init()
+}
 public protocol LocalVideo : AnyObject {
   var id: Swift.Int { get }
   var owner: Swift.String { get }
   var active: Swift.Bool { get set }
   var extraValue: Swift.String { get set }
   var viewId: Swift.String { get }
+  var sort: Swift.String { get set }
   func attach(_ view: ConnectLiveSDK.UIRenderView)
   func detach()
   var hd: Swift.Bool { get set }
@@ -506,6 +450,8 @@ extension ConnectLiveSDK.LocalVideo {
   public func getExtraValue() -> Swift.String
   public func setEnabled(_ enabled: Swift.Bool)
   public func getEnabled() -> Swift.Bool
+  public func setSort(_ sort: Swift.String)
+  public func getSort() -> Swift.String
 }
 public protocol RemoteAudio : AnyObject {
   var id: Swift.Int { get }

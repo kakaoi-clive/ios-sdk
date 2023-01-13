@@ -1,6 +1,13 @@
 # Kakao-i ConnectLive iOS SDK
 
 # 2.2
+## 2.2.5
+* XCode14.1, Swift 5.7.1 환경에서 빌드되었습니다.
+* 화면공유시 19.5:1 비율의 디바이스에서 화면이 crop 되는 이슈가 수정되었습니다.
+* 내부 인증 토큰 갱신 이슈가 수정되었습니다.
+* 통계 데이터 관련 임시로 구성되었던 콜백 및 코드가 제거되었습니다.
+* 일부 버그가 수정되었습니다.
+
 ## 2.2.4
 * 스트림 pause, profile 설정 async 메쏘드가 추가되었습니다.
 * AudioSessionDelegate didChangeRoute() 메쏘드가 currentRoute 정보를 포함하도록 파라미터가 추가되었습니다.
