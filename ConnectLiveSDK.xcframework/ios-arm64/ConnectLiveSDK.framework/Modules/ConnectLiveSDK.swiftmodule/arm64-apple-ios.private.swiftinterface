@@ -1,11 +1,12 @@
 // swift-interface-format-version: 1.0
-// swift-compiler-version: Apple Swift version 5.7.1 (swiftlang-5.7.1.135.3 clang-1400.0.29.51)
+// swift-compiler-version: Apple Swift version 5.7.2 (swiftlang-5.7.2.135.5 clang-1400.0.29.51)
 // swift-module-flags: -target arm64-apple-ios13.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name ConnectLiveSDK
 // swift-module-flags-ignorable: -enable-bare-slash-regex
 import AVFoundation
 import AVKit
 import Combine
 import CoreMIDI
+import CoreVideo
 import CryptoKit
 import Foundation
 import Network
@@ -117,6 +118,7 @@ public struct LocalMediaOptions {
     case fps
     case videoStreamSubType
     case screenCast
+    case blendingFrame
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -291,7 +293,7 @@ public protocol RemoteVideo : AnyObject {
   var pause: Swift.Bool { get set }
   var viewId: Swift.String { get }
   var isSubscribed: Swift.Bool { get }
-  var weight: Swift.Int { get }
+  var sort: Swift.String { get }
   func attach(_ view: ConnectLiveSDK.UIRenderView)
   func detach(_ view: ConnectLiveSDK.UIRenderView)
   func detach()
@@ -312,6 +314,7 @@ extension ConnectLiveSDK.RemoteVideo {
     get
   }
   public func getExtraValue() -> Swift.String
+  public func getSort() -> (Swift.Int, Swift.String)
 }
 public enum DisconnectReason {
   case disconnected
@@ -428,13 +431,17 @@ public struct ProvisionData : Swift.Codable {
   public func encode(to encoder: Swift.Encoder) throws
   public init(from decoder: Swift.Decoder) throws
 }
+public protocol FrameBlender : AnyObject {
+  func blend(frame pixelBuffer: CoreVideo.CVPixelBuffer) -> CoreVideo.CVPixelBuffer?
+  init()
+}
 public protocol LocalVideo : AnyObject {
   var id: Swift.Int { get }
   var owner: Swift.String { get }
   var active: Swift.Bool { get set }
   var extraValue: Swift.String { get set }
   var viewId: Swift.String { get }
-  var weight: Swift.Int { get set }
+  var sort: Swift.String { get set }
   func attach(_ view: ConnectLiveSDK.UIRenderView)
   func detach()
   var hd: Swift.Bool { get set }
@@ -444,8 +451,8 @@ extension ConnectLiveSDK.LocalVideo {
   public func getExtraValue() -> Swift.String
   public func setEnabled(_ enabled: Swift.Bool)
   public func getEnabled() -> Swift.Bool
-  public func setWeight(_ weight: Swift.Int)
-  public func getWeight() -> Swift.Int
+  public func setSort(weight: Swift.Int, mode: Swift.String)
+  public func getSort() -> (Swift.Int, Swift.String)
 }
 public protocol RemoteAudio : AnyObject {
   var id: Swift.Int { get }
