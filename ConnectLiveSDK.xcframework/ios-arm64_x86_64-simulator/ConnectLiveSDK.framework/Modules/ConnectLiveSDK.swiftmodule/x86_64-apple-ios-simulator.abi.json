@@ -14470,6 +14470,13 @@
       },
       {
         "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
+        "declKind": "Import",
+        "moduleName": "ConnectLiveSDK"
+      },
+      {
+        "kind": "Import",
         "name": "AVFoundation",
         "printedName": "AVFoundation",
         "declKind": "Import",
@@ -19332,43 +19339,43 @@
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 393,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "StringLiteral",
-      "offset": 560,
+      "offset": 623,
       "length": 17,
       "value": "\"icl2.cnl.logger\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1117,
+      "offset": 1062,
       "length": 4,
       "value": "5000"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1170,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1202,
+      "offset": 1142,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1232,
+      "offset": 1172,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "BooleanLiteral",
-      "offset": 11557,
+      "offset": 2427,
       "length": 5,
       "value": "false"
     },
@@ -20390,28 +20397,35 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "FloatLiteral",
-      "offset": 474,
+      "offset": 488,
       "length": 4,
       "value": "0.06"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 533,
+      "length": 6,
+      "value": "48000"
+    },
+    {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "StringLiteral",
-      "offset": 628,
+      "offset": 689,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "StringLiteral",
-      "offset": 656,
+      "offset": 717,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "StringLiteral",
-      "offset": 967,
+      "offset": 1028,
       "length": 22,
       "value": "\"icl2.network.monitor\""
     },
