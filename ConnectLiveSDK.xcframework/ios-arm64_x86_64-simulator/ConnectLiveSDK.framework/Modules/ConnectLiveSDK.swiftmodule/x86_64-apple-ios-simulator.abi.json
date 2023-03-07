@@ -4172,43 +4172,6 @@
                 "moduleName": "ConnectLiveSDK"
               },
               {
-                "kind": "Var",
-                "name": "blendingFrame",
-                "printedName": "blendingFrame",
-                "children": [
-                  {
-                    "kind": "TypeFunc",
-                    "name": "Function",
-                    "printedName": "(ConnectLiveSDK.LocalMediaOptions.DevelopOption.Type) -> ConnectLiveSDK.LocalMediaOptions.DevelopOption",
-                    "children": [
-                      {
-                        "kind": "TypeNominal",
-                        "name": "DevelopOption",
-                        "printedName": "ConnectLiveSDK.LocalMediaOptions.DevelopOption",
-                        "usr": "s:14ConnectLiveSDK17LocalMediaOptionsV13DevelopOptionO"
-                      },
-                      {
-                        "kind": "TypeNominal",
-                        "name": "Metatype",
-                        "printedName": "ConnectLiveSDK.LocalMediaOptions.DevelopOption.Type",
-                        "children": [
-                          {
-                            "kind": "TypeNominal",
-                            "name": "DevelopOption",
-                            "printedName": "ConnectLiveSDK.LocalMediaOptions.DevelopOption",
-                            "usr": "s:14ConnectLiveSDK17LocalMediaOptionsV13DevelopOptionO"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "declKind": "EnumElement",
-                "usr": "s:14ConnectLiveSDK17LocalMediaOptionsV13DevelopOptionO13blendingFrameyA2EmF",
-                "mangledName": "$s14ConnectLiveSDK17LocalMediaOptionsV13DevelopOptionO13blendingFrameyA2EmF",
-                "moduleName": "ConnectLiveSDK"
-              },
-              {
                 "kind": "Constructor",
                 "name": "init",
                 "printedName": "init(rawValue:)",
@@ -9144,6 +9107,121 @@
                 "protocolReq": true,
                 "reqNewWitnessTableEntry": true,
                 "accessorKind": "get"
+              }
+            ]
+          },
+          {
+            "kind": "Var",
+            "name": "frameBlender",
+            "printedName": "frameBlender",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Optional",
+                "printedName": "ConnectLiveSDK.FrameBlender?",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "FrameBlender",
+                    "printedName": "ConnectLiveSDK.FrameBlender",
+                    "usr": "s:14ConnectLiveSDK12FrameBlenderP"
+                  }
+                ],
+                "usr": "s:Sq"
+              }
+            ],
+            "declKind": "Var",
+            "usr": "s:14ConnectLiveSDK10LocalMediaP12frameBlenderAA05FrameG0_pSgvp",
+            "mangledName": "$s14ConnectLiveSDK10LocalMediaP12frameBlenderAA05FrameG0_pSgvp",
+            "moduleName": "ConnectLiveSDK",
+            "protocolReq": true,
+            "accessors": [
+              {
+                "kind": "Accessor",
+                "name": "Get",
+                "printedName": "Get()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ConnectLiveSDK.FrameBlender?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FrameBlender",
+                        "printedName": "ConnectLiveSDK.FrameBlender",
+                        "usr": "s:14ConnectLiveSDK12FrameBlenderP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ConnectLiveSDK10LocalMediaP12frameBlenderAA05FrameG0_pSgvg",
+                "mangledName": "$s14ConnectLiveSDK10LocalMediaP12frameBlenderAA05FrameG0_pSgvg",
+                "moduleName": "ConnectLiveSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalMedia>",
+                "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalMedia>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "get"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Set",
+                "printedName": "Set()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  },
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Optional",
+                    "printedName": "ConnectLiveSDK.FrameBlender?",
+                    "children": [
+                      {
+                        "kind": "TypeNominal",
+                        "name": "FrameBlender",
+                        "printedName": "ConnectLiveSDK.FrameBlender",
+                        "usr": "s:14ConnectLiveSDK12FrameBlenderP"
+                      }
+                    ],
+                    "usr": "s:Sq"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ConnectLiveSDK10LocalMediaP12frameBlenderAA05FrameG0_pSgvs",
+                "mangledName": "$s14ConnectLiveSDK10LocalMediaP12frameBlenderAA05FrameG0_pSgvs",
+                "moduleName": "ConnectLiveSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalMedia>",
+                "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalMedia>",
+                "protocolReq": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "set"
+              },
+              {
+                "kind": "Accessor",
+                "name": "Modify",
+                "printedName": "Modify()",
+                "children": [
+                  {
+                    "kind": "TypeNominal",
+                    "name": "Void",
+                    "printedName": "()"
+                  }
+                ],
+                "declKind": "Accessor",
+                "usr": "s:14ConnectLiveSDK10LocalMediaP12frameBlenderAA05FrameG0_pSgvM",
+                "mangledName": "$s14ConnectLiveSDK10LocalMediaP12frameBlenderAA05FrameG0_pSgvM",
+                "moduleName": "ConnectLiveSDK",
+                "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.LocalMedia>",
+                "sugared_genericSig": "<Self where Self : ConnectLiveSDK.LocalMedia>",
+                "protocolReq": true,
+                "implicit": true,
+                "reqNewWitnessTableEntry": true,
+                "accessorKind": "_modify"
               }
             ]
           },
@@ -14340,27 +14418,6 @@
             "protocolReq": true,
             "reqNewWitnessTableEntry": true,
             "funcSelfKind": "NonMutating"
-          },
-          {
-            "kind": "Constructor",
-            "name": "init",
-            "printedName": "init()",
-            "children": [
-              {
-                "kind": "TypeNominal",
-                "name": "GenericTypeParam",
-                "printedName": "τ_0_0"
-              }
-            ],
-            "declKind": "Constructor",
-            "usr": "s:14ConnectLiveSDK12FrameBlenderPxycfc",
-            "mangledName": "$s14ConnectLiveSDK12FrameBlenderPxycfc",
-            "moduleName": "ConnectLiveSDK",
-            "genericSig": "<τ_0_0 where τ_0_0 : ConnectLiveSDK.FrameBlender>",
-            "sugared_genericSig": "<Self where Self : ConnectLiveSDK.FrameBlender>",
-            "protocolReq": true,
-            "reqNewWitnessTableEntry": true,
-            "init_kind": "Designated"
           }
         ],
         "declKind": "Protocol",
@@ -14465,6 +14522,13 @@
         "kind": "Import",
         "name": "_Concurrency",
         "printedName": "_Concurrency",
+        "declKind": "Import",
+        "moduleName": "ConnectLiveSDK"
+      },
+      {
+        "kind": "Import",
+        "name": "os.log",
+        "printedName": "os.log",
         "declKind": "Import",
         "moduleName": "ConnectLiveSDK"
       },
@@ -18941,14 +19005,14 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Room\/Model\/AddCandidateRequest.swift",
       "kind": "StringLiteral",
-      "offset": 555,
+      "offset": 481,
       "length": 5,
       "value": "\"2.0\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/ServerAPI\/Room\/Model\/AddCandidateRequest.swift",
       "kind": "StringLiteral",
-      "offset": 617,
+      "offset": 543,
       "length": 19,
       "value": "\"Room.AddCandidate\""
     },
@@ -18976,7 +19040,7 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "StringLiteral",
-      "offset": 4718,
+      "offset": 4734,
       "length": 2,
       "value": "\"\""
     },
@@ -19332,43 +19396,43 @@
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 393,
+      "length": 1,
+      "value": "5"
+    },
+    {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "StringLiteral",
-      "offset": 560,
+      "offset": 623,
       "length": 17,
       "value": "\"icl2.cnl.logger\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1117,
+      "offset": 1062,
       "length": 4,
       "value": "5000"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1170,
-      "length": 1,
-      "value": "5"
-    },
-    {
-      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
-      "kind": "IntegerLiteral",
-      "offset": 1202,
+      "offset": 1142,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "IntegerLiteral",
-      "offset": 1232,
+      "offset": 1172,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LogService.swift",
       "kind": "BooleanLiteral",
-      "offset": 11557,
+      "offset": 2427,
       "length": 5,
       "value": "false"
     },
@@ -19872,35 +19936,35 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/RoomService.swift",
       "kind": "StringLiteral",
-      "offset": 617,
+      "offset": 646,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/RoomService.swift",
       "kind": "StringLiteral",
-      "offset": 1267,
+      "offset": 1296,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/RoomService.swift",
       "kind": "Dictionary",
-      "offset": 1472,
+      "offset": 1501,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/RoomService.swift",
       "kind": "Dictionary",
-      "offset": 1569,
+      "offset": 1598,
       "length": 3,
       "value": "[]"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/RoomService.swift",
       "kind": "BooleanLiteral",
-      "offset": 19509,
+      "offset": 19602,
       "length": 5,
       "value": "false"
     },
@@ -20397,28 +20461,42 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "FloatLiteral",
-      "offset": 474,
+      "offset": 488,
       "length": 4,
       "value": "0.06"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 533,
+      "length": 6,
+      "value": "48000"
+    },
+    {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
+      "kind": "IntegerLiteral",
+      "offset": 585,
+      "length": 6,
+      "value": "16000"
+    },
+    {
+      "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "StringLiteral",
-      "offset": 628,
+      "offset": 748,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "StringLiteral",
-      "offset": 656,
+      "offset": 783,
       "length": 2,
       "value": "\"\""
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/ConnectLiveService.swift",
       "kind": "StringLiteral",
-      "offset": 967,
+      "offset": 1094,
       "length": 22,
       "value": "\"icl2.network.monitor\""
     },
