@@ -148,6 +148,13 @@
       },
       {
         "kind": "Import",
+        "name": "_Concurrency",
+        "printedName": "_Concurrency",
+        "declKind": "Import",
+        "moduleName": "ConnectLiveSDK"
+      },
+      {
+        "kind": "Import",
         "name": "WebRTC",
         "printedName": "WebRTC",
         "declKind": "Import",
@@ -19019,28 +19026,28 @@
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "IntegerLiteral",
-      "offset": 386,
+      "offset": 406,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "IntegerLiteral",
-      "offset": 425,
+      "offset": 445,
       "length": 2,
       "value": "10"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "IntegerLiteral",
-      "offset": 551,
+      "offset": 571,
       "length": 1,
       "value": "0"
     },
     {
       "filePath": "\/Users\/chance\/Project\/kep\/icl2-ios-sdk\/ConnectLive\/Service\/LocalScreenExtensionService.swift",
       "kind": "StringLiteral",
-      "offset": 4633,
+      "offset": 4815,
       "length": 2,
       "value": "\"\""
     },
