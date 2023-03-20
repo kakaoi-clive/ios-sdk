@@ -118,7 +118,6 @@ public struct LocalMediaOptions {
     case fps
     case videoStreamSubType
     case screenCast
-    case blendingFrame
     public init?(rawValue: Swift.String)
     public typealias RawValue = Swift.String
     public var rawValue: Swift.String {
@@ -271,6 +270,7 @@ public protocol LocalMedia : AnyObject {
   var isMirror: Swift.Bool { get }
   var audioLevel: Swift.Int { get }
   var videoSource: ConnectLiveSDK.VideoCapturerSource? { get }
+  var frameBlender: ConnectLiveSDK.FrameBlender? { get set }
   func start(completion: @escaping (Swift.Error?) -> ())
   #if compiler(>=5.3) && $AsyncAwait
   func start() async throws
@@ -314,6 +314,7 @@ extension ConnectLiveSDK.RemoteVideo {
     get
   }
   public func getExtraValue() -> Swift.String
+  public func getSort() -> (Swift.Int, Swift.String)
 }
 public enum DisconnectReason {
   case disconnected
@@ -432,7 +433,6 @@ public struct ProvisionData : Swift.Codable {
 }
 public protocol FrameBlender : AnyObject {
   func blend(frame pixelBuffer: CoreVideo.CVPixelBuffer) -> CoreVideo.CVPixelBuffer?
-  init()
 }
 public protocol LocalVideo : AnyObject {
   var id: Swift.Int { get }
@@ -450,8 +450,8 @@ extension ConnectLiveSDK.LocalVideo {
   public func getExtraValue() -> Swift.String
   public func setEnabled(_ enabled: Swift.Bool)
   public func getEnabled() -> Swift.Bool
-  public func setSort(_ sort: Swift.String)
-  public func getSort() -> Swift.String
+  public func setSort(weight: Swift.Int, mode: Swift.String)
+  public func getSort() -> (Swift.Int, Swift.String)
 }
 public protocol RemoteAudio : AnyObject {
   var id: Swift.Int { get }
